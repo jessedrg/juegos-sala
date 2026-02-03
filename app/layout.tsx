@@ -54,10 +54,10 @@ export const metadata: Metadata = {
     description: 'Mesas de billar, futbolines, dianas de dardos y air hockey para tu hogar. Garantía 2 años.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=630&fit=crop&q=80',
+        url: 'https://images.unsplash.com/photo-1647633391986-4614f2ee0ca4?w=1200&h=630&fit=crop&q=80',
         width: 1200,
         height: 630,
-        alt: 'Game Room - Tu Sala de Juegos en Casa',
+        alt: 'The Games Room - Mesas de Billar y Juegos para Casa',
       },
     ],
   },
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Game Room | Mesas de Billar, Futbolines y Dardos',
     description: 'Mesas de billar, futbolines y dardos para tu hogar.',
-    images: ['https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=630&fit=crop&q=80'],
+    images: ['https://images.unsplash.com/photo-1647633391986-4614f2ee0ca4?w=1200&h=630&fit=crop&q=80'],
     creator: '@thegamesroomio',
   },
   robots: {
