@@ -1,0 +1,136 @@
+// Postal code data system for dynamic SEO pages
+import postalCodesData from './postal-codes.json';
+
+export type CountryCode = 'ES' | 'DE' | 'FR' | 'IT' | 'PT' | 'NL' | 'PL' | 'AT' | 'BE' | 'CH';
+
+export interface PostalCodeData {
+  name: string;
+  region: string;
+  lat: number;
+  lng: number;
+}
+
+const data = postalCodesData as Record<CountryCode, Record<string, PostalCodeData>>;
+
+// Country to locale mapping
+export const COUNTRY_LOCALE: Record<CountryCode, string> = {
+  ES: 'es', DE: 'de', FR: 'fr', IT: 'it', PT: 'pt', 
+  NL: 'nl', PL: 'pl', AT: 'de', BE: 'fr', CH: 'de'
+};
+
+// Country names
+export const COUNTRY_NAMES: Record<CountryCode, Record<string, string>> = {
+  ES: { es: 'España', en: 'Spain' },
+  DE: { de: 'Deutschland', en: 'Germany' },
+  FR: { fr: 'France', en: 'France' },
+  IT: { it: 'Italia', en: 'Italy' },
+  PT: { pt: 'Portugal', en: 'Portugal' },
+  NL: { nl: 'Nederland', en: 'Netherlands' },
+  PL: { pl: 'Polska', en: 'Poland' },
+  AT: { de: 'Österreich', en: 'Austria' },
+  BE: { fr: 'Belgique', en: 'Belgium' },
+  CH: { de: 'Schweiz', en: 'Switzerland' },
+};
+
+// Get postal code data
+export function getPostalCode(country: CountryCode, postalCode: string): PostalCodeData | undefined {
+  return data[country]?.[postalCode];
+}
+
+// Get all postal codes for a country
+export function getPostalCodesForCountry(country: CountryCode): string[] {
+  return Object.keys(data[country] || {});
+}
+
+// Get top postal codes by population centers (major cities)
+export function getTopPostalCodes(country: CountryCode, limit: number = 100): string[] {
+  const codes = Object.keys(data[country] || {});
+  // Return first N codes (they're typically ordered by importance)
+  return codes.slice(0, limit);
+}
+
+// Validate postal code exists
+export function isValidPostalCode(country: CountryCode, postalCode: string): boolean {
+  return !!data[country]?.[postalCode];
+}
+
+// Create slug from postal code and name
+export function createPostalSlug(postalCode: string, name: string): string {
+  const slug = name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  return `${postalCode}-${slug}`;
+}
+
+// Parse postal slug back to postal code
+export function parsePostalSlug(slug: string): { postalCode: string; name: string } | null {
+  const match = slug.match(/^(\d+)-(.+)$/);
+  if (!match) return null;
+  return { postalCode: match[1], name: match[2] };
+}
+
+// Product categories with translations
+export const PRODUCT_CATEGORIES = [
+  { 
+    slug: 'mesas-billar',
+    icon: '🎱',
+    image: 'https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?q=80&w=1200&auto=format&fit=crop',
+    translations: {
+      es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', 
+      fr: 'Tables de Billard', it: 'Tavoli da Biliardo', pt: 'Mesas de Bilhar',
+      nl: 'Pooltafels', pl: 'Stoły Bilardowe'
+    },
+    priceRange: { min: 800, max: 8000 },
+  },
+  { 
+    slug: 'futbolines',
+    icon: '⚽',
+    image: 'https://images.unsplash.com/photo-1595912679957-4d0e0e0e0e0e?q=80&w=1200&auto=format&fit=crop',
+    translations: {
+      es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfußball',
+      fr: 'Baby-foot', it: 'Calcio Balilla', pt: 'Matraquilhos',
+      nl: 'Tafelvoetbal', pl: 'Piłkarzyki'
+    },
+    priceRange: { min: 300, max: 3000 },
+  },
+  { 
+    slug: 'dardos',
+    icon: '🎯',
+    image: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1200&auto=format&fit=crop',
+    translations: {
+      es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben',
+      fr: 'Cibles de Fléchettes', it: 'Bersagli Freccette', pt: 'Alvos de Dardos',
+      nl: 'Dartborden', pl: 'Tarcze do Darta'
+    },
+    priceRange: { min: 50, max: 500 },
+  },
+  { 
+    slug: 'air-hockey',
+    icon: '🏒',
+    image: 'https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=1200&auto=format&fit=crop',
+    translations: {
+      es: 'Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische',
+      fr: 'Tables Air Hockey', it: 'Tavoli Air Hockey', pt: 'Mesas Air Hockey',
+      nl: 'Airhockey Tafels', pl: 'Stoły do Air Hockey'
+    },
+    priceRange: { min: 200, max: 2500 },
+  },
+] as const;
+
+export type ProductCategory = typeof PRODUCT_CATEGORIES[number];
+
+export function getCategoryBySlug(slug: string): ProductCategory | undefined {
+  return PRODUCT_CATEGORIES.find(cat => cat.slug === slug);
+}
+
+export function formatPrice(amount: number, locale: string): string {
+  return new Intl.NumberFormat(locale, { 
+    style: 'currency', 
+    currency: 'EUR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(amount);
+}
