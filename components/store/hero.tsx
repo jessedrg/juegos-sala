@@ -57,6 +57,50 @@ export function Hero({ locale }: HeroProps) {
         { value: '2 ans', label: 'Garantie' },
       ]
     },
+    it: {
+      tag: 'Sala Giochi',
+      title: 'Game Room\nper la tua casa',
+      subtitle: 'Garanzia 2 anni. Preventivo gratuito.',
+      cta: 'Vedi Catalogo',
+      stats: [
+        { value: '3.000+', label: 'Clienti' },
+        { value: '4.8', label: 'Valutazione' },
+        { value: '2 anni', label: 'Garanzia' },
+      ]
+    },
+    pt: {
+      tag: 'Sala de Jogos',
+      title: 'Game Room\npara a sua casa',
+      subtitle: 'Garantia 2 anos. Orçamento grátis.',
+      cta: 'Ver Catálogo',
+      stats: [
+        { value: '3.000+', label: 'Clientes' },
+        { value: '4.8', label: 'Avaliação' },
+        { value: '2 anos', label: 'Garantia' },
+      ]
+    },
+    nl: {
+      tag: 'Speelkamer',
+      title: 'Game Room\nvoor uw huis',
+      subtitle: '2 jaar garantie. Gratis offerte.',
+      cta: 'Bekijk Catalogus',
+      stats: [
+        { value: '3.000+', label: 'Klanten' },
+        { value: '4.8', label: 'Beoordeling' },
+        { value: '2 jaar', label: 'Garantie' },
+      ]
+    },
+    pl: {
+      tag: 'Pokój Gier',
+      title: 'Game Room\ndla Twojego domu',
+      subtitle: 'Gwarancja 2 lata. Darmowa wycena.',
+      cta: 'Zobacz Katalog',
+      stats: [
+        { value: '3 000+', label: 'Klientów' },
+        { value: '4.8', label: 'Ocena' },
+        { value: '2 lata', label: 'Gwarancja' },
+      ]
+    },
   };
 
   const t = texts[locale] || texts.es;
@@ -91,7 +135,7 @@ export function Hero({ locale }: HeroProps) {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
               <Link 
-                href={`/${locale === 'en' ? '' : locale + '/'}saunas-finlandesas`}
+                href={`/${locale === 'en' ? '' : locale + '/'}mesas-billar`}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-neutral-900 text-white text-sm rounded-full hover:bg-neutral-800 transition-colors"
               >
                 {t.cta}
@@ -102,7 +146,7 @@ export function Hero({ locale }: HeroProps) {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-neutral-200 text-neutral-700 text-sm rounded-full hover:bg-neutral-100 transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
-                Contactar
+                {locale === 'es' ? 'Contactar' : locale === 'en' ? 'Contact' : locale === 'de' ? 'Kontakt' : locale === 'fr' ? 'Contact' : locale === 'it' ? 'Contatto' : locale === 'pt' ? 'Contato' : locale === 'nl' ? 'Contact' : locale === 'pl' ? 'Kontakt' : 'Contact'}
               </button>
             </div>
 
@@ -136,8 +180,8 @@ export function Hero({ locale }: HeroProps) {
       {/* Mobile Image */}
       <div className="relative h-80 lg:hidden">
         <Image 
-          src="https://images.unsplash.com/photo-1759302354886-f2c37dd3dd8c?q=80&w=1349&auto=format&fit=crop" 
-          alt="Sauna finlandesa" 
+          src="https://images.unsplash.com/photo-1695727008212-5d46172962b6?q=80&w=1336&auto=format&fit=crop" 
+          alt="Mesa de billar" 
           fill 
           className="object-cover" 
           priority 

@@ -10,7 +10,7 @@ export function Features({ locale }: FeaturesProps) {
     es: {
       title: 'Por qué elegirnos',
       features: [
-        { title: 'Garantía 5 años', desc: 'Cobertura completa en todos los productos' },
+        { title: 'Garantía 2 años', desc: 'Cobertura completa en todos los productos' },
         { title: 'Envío incluido', desc: 'Entrega gratuita en toda España' },
         { title: 'Instalación profesional', desc: 'Equipo técnico especializado' },
         { title: 'Soporte 24/7', desc: 'Atención al cliente siempre disponible' },
@@ -19,7 +19,7 @@ export function Features({ locale }: FeaturesProps) {
     en: {
       title: 'Why choose us',
       features: [
-        { title: '5 year warranty', desc: 'Full coverage on all products' },
+        { title: '2 year warranty', desc: 'Full coverage on all products' },
         { title: 'Free shipping', desc: 'Free delivery nationwide' },
         { title: 'Professional installation', desc: 'Specialized technical team' },
         { title: '24/7 Support', desc: 'Customer service always available' },
@@ -28,7 +28,7 @@ export function Features({ locale }: FeaturesProps) {
     de: {
       title: 'Warum uns wählen',
       features: [
-        { title: '5 Jahre Garantie', desc: 'Volle Abdeckung auf alle Produkte' },
+        { title: '2 Jahre Garantie', desc: 'Volle Abdeckung auf alle Produkte' },
         { title: 'Kostenloser Versand', desc: 'Kostenlose Lieferung deutschlandweit' },
         { title: 'Professionelle Installation', desc: 'Spezialisiertes technisches Team' },
         { title: '24/7 Support', desc: 'Kundenservice immer verfügbar' },
@@ -37,10 +37,46 @@ export function Features({ locale }: FeaturesProps) {
     fr: {
       title: 'Pourquoi nous choisir',
       features: [
-        { title: 'Garantie 5 ans', desc: 'Couverture complète sur tous les produits' },
+        { title: 'Garantie 2 ans', desc: 'Couverture complète sur tous les produits' },
         { title: 'Livraison gratuite', desc: 'Livraison gratuite dans toute la France' },
         { title: 'Installation professionnelle', desc: 'Équipe technique spécialisée' },
         { title: 'Support 24/7', desc: 'Service client toujours disponible' },
+      ]
+    },
+    it: {
+      title: 'Perché sceglierci',
+      features: [
+        { title: 'Garanzia 2 anni', desc: 'Copertura completa su tutti i prodotti' },
+        { title: 'Spedizione gratuita', desc: 'Consegna gratuita in tutta Italia' },
+        { title: 'Installazione professionale', desc: 'Team tecnico specializzato' },
+        { title: 'Supporto 24/7', desc: 'Servizio clienti sempre disponibile' },
+      ]
+    },
+    pt: {
+      title: 'Por que nos escolher',
+      features: [
+        { title: 'Garantia 2 anos', desc: 'Cobertura completa em todos os produtos' },
+        { title: 'Envio grátis', desc: 'Entrega gratuita em todo Portugal' },
+        { title: 'Instalação profissional', desc: 'Equipe técnica especializada' },
+        { title: 'Suporte 24/7', desc: 'Atendimento ao cliente sempre disponível' },
+      ]
+    },
+    nl: {
+      title: 'Waarom ons kiezen',
+      features: [
+        { title: '2 jaar garantie', desc: 'Volledige dekking op alle producten' },
+        { title: 'Gratis verzending', desc: 'Gratis levering in heel Nederland' },
+        { title: 'Professionele installatie', desc: 'Gespecialiseerd technisch team' },
+        { title: '24/7 Ondersteuning', desc: 'Klantenservice altijd beschikbaar' },
+      ]
+    },
+    pl: {
+      title: 'Dlaczego my',
+      features: [
+        { title: 'Gwarancja 2 lata', desc: 'Pełne pokrycie wszystkich produktów' },
+        { title: 'Darmowa wysyłka', desc: 'Bezpłatna dostawa w całej Polsce' },
+        { title: 'Profesjonalna instalacja', desc: 'Wyspecjalizowany zespół techniczny' },
+        { title: 'Wsparcie 24/7', desc: 'Obsługa klienta zawsze dostępna' },
       ]
     },
   };

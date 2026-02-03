@@ -12,29 +12,29 @@ const CATEGORIES = [
     slug: 'mesas-billar',
     image: 'https://images.unsplash.com/photo-1695727008212-5d46172962b6?q=80&w=1336&auto=format&fit=crop',
     price: '800€',
-    names: { es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', fr: 'Tables de Billard' },
-    desc: { es: 'Profesionales y domésticas', en: 'Professional and home use', de: 'Professionell und für Zuhause', fr: 'Professionnelles et domestiques' }
+    names: { es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', fr: 'Tables de Billard', it: 'Tavoli da Biliardo', pt: 'Mesas de Bilhar', nl: 'Pooltafels', pl: 'Stoły Bilardowe' },
+    desc: { es: 'Profesionales y domésticas', en: 'Professional and home use', de: 'Professionell und für Zuhause', fr: 'Professionnelles et domestiques', it: 'Professionali e domestici', pt: 'Profissionais e domésticas', nl: 'Professioneel en voor thuis', pl: 'Profesjonalne i domowe' }
   },
   { 
     slug: 'futbolines',
     image: 'https://images.unsplash.com/photo-1690073938628-359f281dcabb?q=80&w=1287&auto=format&fit=crop',
     price: '300€',
-    names: { es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfußball', fr: 'Baby-foot' },
-    desc: { es: 'Diversión para todos', en: 'Fun for everyone', de: 'Spaß für alle', fr: 'Plaisir pour tous' }
+    names: { es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfußball', fr: 'Baby-foot', it: 'Calcio Balilla', pt: 'Matraquilhos', nl: 'Tafelvoetbal', pl: 'Piłkarzyki' },
+    desc: { es: 'Diversión para todos', en: 'Fun for everyone', de: 'Spaß für alle', fr: 'Plaisir pour tous', it: 'Divertimento per tutti', pt: 'Diversão para todos', nl: 'Plezier voor iedereen', pl: 'Zabawa dla wszystkich' }
   },
   { 
     slug: 'dardos',
     image: 'https://images.unsplash.com/photo-1638430325415-2f2cc6ae838f?q=80&w=1287&auto=format&fit=crop',
     price: '50€',
-    names: { es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben', fr: 'Cibles de Fléchettes' },
-    desc: { es: 'Electrónicas y clásicas', en: 'Electronic and classic', de: 'Elektronisch und klassisch', fr: 'Électroniques et classiques' }
+    names: { es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben', fr: 'Cibles de Fléchettes', it: 'Bersagli Freccette', pt: 'Alvos de Dardos', nl: 'Dartborden', pl: 'Tarcze do Darta' },
+    desc: { es: 'Electrónicas y clásicas', en: 'Electronic and classic', de: 'Elektronisch und klassisch', fr: 'Électroniques et classiques', it: 'Elettroniche e classiche', pt: 'Eletrônicas e clássicas', nl: 'Elektronisch en klassiek', pl: 'Elektroniczne i klasyczne' }
   },
   { 
     slug: 'air-hockey',
     image: 'https://images.unsplash.com/photo-1650916099935-3c32281bc0e3?q=80&w=1287&auto=format&fit=crop',
     price: '200€',
-    names: { es: 'Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische', fr: 'Tables Air Hockey' },
-    desc: { es: 'Acción y velocidad', en: 'Action and speed', de: 'Action und Geschwindigkeit', fr: 'Action et vitesse' }
+    names: { es: 'Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische', fr: 'Tables Air Hockey', it: 'Tavoli Air Hockey', pt: 'Mesas Air Hockey', nl: 'Airhockey Tafels', pl: 'Stoły do Air Hockey' },
+    desc: { es: 'Acción y velocidad', en: 'Action and speed', de: 'Action und Geschwindigkeit', fr: 'Action et vitesse', it: 'Azione e velocità', pt: 'Ação e velocidade', nl: 'Actie en snelheid', pl: 'Akcja i prędkość' }
   },
 ];
 
@@ -44,6 +44,10 @@ export function Categories({ locale }: CategoriesProps) {
     en: { title: 'Our Products', subtitle: 'Premium quality for your home', from: 'From' },
     de: { title: 'Unsere Produkte', subtitle: 'Premium-Qualität für Ihr Zuhause', from: 'Ab' },
     fr: { title: 'Nos Produits', subtitle: 'Qualité premium pour votre maison', from: 'À partir de' },
+    it: { title: 'I Nostri Prodotti', subtitle: 'Qualità premium per la tua casa', from: 'Da' },
+    pt: { title: 'Nossos Produtos', subtitle: 'Qualidade premium para sua casa', from: 'Desde' },
+    nl: { title: 'Onze Producten', subtitle: 'Premium kwaliteit voor uw huis', from: 'Vanaf' },
+    pl: { title: 'Nasze Produkty', subtitle: 'Jakość premium dla Twojego domu', from: 'Od' },
   };
   const t = texts[locale] || texts.es;
 
