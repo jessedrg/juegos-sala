@@ -1,8 +1,8 @@
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gameroom.io'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://thegamesroom.io'
 
 export async function GET() {
   const robotsTxt = `# Game Room Robots.txt
-# https://gameroom.io
+# https://thegamesroom.io
 
 User-agent: *
 Allow: /

@@ -1,6 +1,6 @@
 import { SUPPORTED_LOCALES } from "@/lib/seo-data";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gameroom.io";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://thegamesroom.io";
 
 // Locales that have massive city sitemaps
 const MASSIVE_LOCALES = ['es', 'en', 'de', 'fr', 'it', 'pt', 'nl', 'pl', 'cs', 'el'];

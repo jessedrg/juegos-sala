@@ -1,6 +1,6 @@
 import { SUPPORTED_LOCALES } from "@/lib/seo-data";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gameroom.io";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://thegamesroom.io";
 
 export async function GET() {
   const urls: string[] = [];

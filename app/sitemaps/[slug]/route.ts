@@ -1,7 +1,7 @@
 import { SUPPORTED_LOCALES, CATEGORIES, CATEGORY_TRANSLATIONS, LOCALES, INTENT_TRANSLATIONS, type Locale } from "@/lib/seo-data";
 import citiesData from "@/lib/cities-processed.json";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gameroom.io";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://thegamesroom.io";
 
 // Type for cities data
 type CityData = { name: string; slug: string; population: number };

@@ -17,7 +17,7 @@ const cormorant = Cormorant_Garamond({
   display: 'swap'
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gameroom.io';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://thegamesroom.io';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: 'Game Room | Mesas de Billar, Futbolines y Dardos',
     description: 'Mesas de billar, futbolines y dardos para tu hogar.',
     images: ['https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=630&fit=crop&q=80'],
-    creator: '@gameroomio',
+    creator: '@thegamesroomio',
   },
   robots: {
     index: true,
