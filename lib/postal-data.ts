@@ -72,10 +72,15 @@ export function parsePostalSlug(slug: string): { postalCode: string; name: strin
   return { postalCode: match[1], name: match[2] };
 }
 
-// Product categories with translations
+// Product categories with translations and localized slugs
 export const PRODUCT_CATEGORIES = [
   { 
     slug: 'mesas-billar',
+    slugs: {
+      es: 'mesas-billar', en: 'pool-tables', de: 'billardtische',
+      fr: 'tables-billard', it: 'tavoli-biliardo', pt: 'mesas-bilhar',
+      nl: 'pooltafels', pl: 'stoly-bilardowe'
+    },
     icon: '🎱',
     image: 'https://images.unsplash.com/photo-1695727008212-5d46172962b6?q=80&w=1336&auto=format&fit=crop',
     translations: {
@@ -87,6 +92,11 @@ export const PRODUCT_CATEGORIES = [
   },
   { 
     slug: 'futbolines',
+    slugs: {
+      es: 'futbolines', en: 'foosball-tables', de: 'tischfussball',
+      fr: 'baby-foot', it: 'calcio-balilla', pt: 'matraquilhos',
+      nl: 'tafelvoetbal', pl: 'pilkarzyki'
+    },
     icon: '⚽',
     image: 'https://images.unsplash.com/photo-1690073938628-359f281dcabb?q=80&w=1287&auto=format&fit=crop',
     translations: {
@@ -98,6 +108,11 @@ export const PRODUCT_CATEGORIES = [
   },
   { 
     slug: 'dardos',
+    slugs: {
+      es: 'dardos', en: 'dart-boards', de: 'dartscheiben',
+      fr: 'cibles-flechettes', it: 'bersagli-freccette', pt: 'alvos-dardos',
+      nl: 'dartborden', pl: 'tarcze-darta'
+    },
     icon: '🎯',
     image: 'https://images.unsplash.com/photo-1638430325415-2f2cc6ae838f?q=80&w=1287&auto=format&fit=crop',
     translations: {
@@ -109,6 +124,11 @@ export const PRODUCT_CATEGORIES = [
   },
   { 
     slug: 'air-hockey',
+    slugs: {
+      es: 'air-hockey', en: 'air-hockey', de: 'airhockey',
+      fr: 'air-hockey', it: 'air-hockey', pt: 'air-hockey',
+      nl: 'airhockey', pl: 'air-hockey'
+    },
     icon: '🏒',
     image: 'https://images.unsplash.com/photo-1650916099935-3c32281bc0e3?q=80&w=1287&auto=format&fit=crop',
     translations: {
@@ -122,8 +142,24 @@ export const PRODUCT_CATEGORIES = [
 
 export type ProductCategory = typeof PRODUCT_CATEGORIES[number];
 
+// Get category by any slug (supports all localized slugs)
+export function getCategoryByAnySlug(slug: string): ProductCategory | undefined {
+  return PRODUCT_CATEGORIES.find(cat => {
+    if (cat.slug === slug) return true;
+    const slugValues = Object.values(cat.slugs) as string[];
+    return slugValues.includes(slug);
+  });
+}
+
+// Get localized slug for a category
+export function getLocalizedSlug(category: ProductCategory, locale: string): string {
+  const slugs = category.slugs as Record<string, string>;
+  return slugs[locale] || category.slug;
+}
+
+// Get category by slug (supports localized slugs)
 export function getCategoryBySlug(slug: string): ProductCategory | undefined {
-  return PRODUCT_CATEGORIES.find(cat => cat.slug === slug);
+  return getCategoryByAnySlug(slug);
 }
 
 export function formatPrice(amount: number, locale: string): string {
