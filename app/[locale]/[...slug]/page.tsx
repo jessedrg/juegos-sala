@@ -140,9 +140,11 @@ export default async function DynamicPage({ params }: PageProps) {
   const validLocale = SUPPORTED_LOCALES.includes(locale as Locale) ? locale as Locale : 'es';
   const category = getCategoryBySlug(slug?.[0] || '');
   
-  const catName = category?.names[validLocale as keyof typeof category.names] || category?.names.es || 'Juegos de Sala';
-  const catDesc = category?.desc[validLocale as keyof typeof category.desc] || category?.desc.es || '';
-  const catImage = category?.image || 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=800&fit=crop';
+  const defaultNames: Record<string, string> = { es: 'Juegos de Sala', en: 'Game Room', de: 'Spielzimmer', fr: 'Salle de Jeux', it: 'Sala Giochi', pt: 'Sala de Jogos', nl: 'Speelkamer', pl: 'Pokój Gier' };
+  const defaultDescs: Record<string, string> = { es: 'Mesas de billar, futbolines y juegos de sala de alta calidad.', en: 'High quality pool tables, foosball and game room equipment.', de: 'Hochwertige Billardtische, Tischfußball und Spielzimmerausstattung.', fr: 'Tables de billard, baby-foot et équipements de salle de jeux.', it: 'Tavoli da biliardo, calcio balilla e attrezzature per sala giochi.', pt: 'Mesas de bilhar, matraquilhos e equipamentos de sala de jogos.', nl: 'Pooltafels, tafelvoetbal en speelkameruitrusting.', pl: 'Stoły bilardowe, piłkarzyki i wyposażenie pokoju gier.' };
+  const catName = category?.names[validLocale as keyof typeof category.names] || category?.names.es || defaultNames[validLocale] || defaultNames.es;
+  const catDesc = category?.desc[validLocale as keyof typeof category.desc] || category?.desc.es || defaultDescs[validLocale] || defaultDescs.es;
+  const catImage = category?.image || 'https://images.unsplash.com/photo-1695727008212-5d46172962b6?q=80&w=1336&auto=format&fit=crop';
   const catPrice = category?.price || '2.500€';
   
   // Related categories
