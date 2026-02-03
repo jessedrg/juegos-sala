@@ -75,21 +75,21 @@ export async function GET(_request: Request, { params }: RouteParams) {
     }
   }
 
-  // 5. Sauna-specific modifiers
-  const saunaModifiers: Record<string, string[]> = {
-    es: ['organico', 'premium', 'laboratorio', 'natural', 'legal', 'certificado'],
-    en: ['organic', 'premium', 'lab-tested', 'natural', 'legal', 'certified'],
-    de: ['bio', 'premium', 'laborgetestet', 'natuerlich', 'legal', 'zertifiziert'],
-    fr: ['bio', 'premium', 'teste-laboratoire', 'naturel', 'legal', 'certifie'],
-    it: ['biologico', 'premium', 'testato-laboratorio', 'naturale', 'legale', 'certificato'],
-    pt: ['organico', 'premium', 'testado-laboratorio', 'natural', 'legal', 'certificado'],
-    nl: ['biologisch', 'premium', 'labgetest', 'natuurlijk', 'legaal', 'gecertificeerd'],
-    pl: ['organiczny', 'premium', 'testowany', 'naturalny', 'legalny', 'certyfikowany'],
-    cs: ['bio', 'premium', 'testovano', 'prirodni', 'legalni', 'certifikovany'],
-    el: ['viologiko', 'premium', 'ergastiriako', 'fysiko', 'nomimo', 'pistopoiimeno'],
+  // 5. Game room-specific modifiers
+  const gameModifiers: Record<string, string[]> = {
+    es: ['profesional', 'domestico', 'barato', 'premium', 'oferta', 'calidad'],
+    en: ['professional', 'home', 'cheap', 'premium', 'sale', 'quality'],
+    de: ['professionell', 'heim', 'guenstig', 'premium', 'angebot', 'qualitaet'],
+    fr: ['professionnel', 'maison', 'pas-cher', 'premium', 'promo', 'qualite'],
+    it: ['professionale', 'casa', 'economico', 'premium', 'offerta', 'qualita'],
+    pt: ['profissional', 'casa', 'barato', 'premium', 'oferta', 'qualidade'],
+    nl: ['professioneel', 'thuis', 'goedkoop', 'premium', 'aanbieding', 'kwaliteit'],
+    pl: ['profesjonalny', 'domowy', 'tani', 'premium', 'promocja', 'jakosc'],
+    cs: ['profesionalni', 'domaci', 'levny', 'premium', 'akce', 'kvalita'],
+    el: ['epaggelmatiko', 'spitiko', 'ftino', 'premium', 'prosfora', 'poiotita'],
   };
 
-  const modifiers = saunaModifiers[cleanLocale] || saunaModifiers.en;
+  const modifiers = gameModifiers[cleanLocale] || gameModifiers.en;
   for (const modifier of modifiers) {
     for (const cat of CATEGORIES.slice(0, 5)) {
       const catSlug = catTranslations[cat].replace(/ /g, '-');
