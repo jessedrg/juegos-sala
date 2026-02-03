@@ -121,6 +121,10 @@ export default async function PostalCodePage({ params }: PageProps) {
     en: { from: 'From', quote: 'Free Quote', warranty: '2 year warranty', quality: 'Premium quality', delivery: 'Fast delivery', nearby: 'Nearby areas', otherProducts: 'Other products', viewAll: 'View catalog' },
     de: { from: 'Ab', quote: 'Kostenloses Angebot', warranty: '2 Jahre Garantie', quality: 'Premium Qualität', delivery: 'Schnelle Lieferung', nearby: 'Nahe Gebiete', otherProducts: 'Andere Produkte', viewAll: 'Katalog ansehen' },
     fr: { from: 'À partir de', quote: 'Devis Gratuit', warranty: 'Garantie 2 ans', quality: 'Qualité premium', delivery: 'Livraison rapide', nearby: 'Zones proches', otherProducts: 'Autres produits', viewAll: 'Voir catalogue' },
+    it: { from: 'Da', quote: 'Preventivo Gratuito', warranty: 'Garanzia 2 anni', quality: 'Qualità premium', delivery: 'Consegna rapida', nearby: 'Zone vicine', otherProducts: 'Altri prodotti', viewAll: 'Vedi catalogo' },
+    pt: { from: 'Desde', quote: 'Orçamento Grátis', warranty: 'Garantia 2 anos', quality: 'Qualidade premium', delivery: 'Entrega rápida', nearby: 'Zonas próximas', otherProducts: 'Outros produtos', viewAll: 'Ver catálogo' },
+    nl: { from: 'Vanaf', quote: 'Gratis Offerte', warranty: '2 jaar garantie', quality: 'Premium kwaliteit', delivery: 'Snelle levering', nearby: 'Nabijgelegen gebieden', otherProducts: 'Andere producten', viewAll: 'Bekijk catalogus' },
+    pl: { from: 'Od', quote: 'Darmowa Wycena', warranty: 'Gwarancja 2 lata', quality: 'Jakość premium', delivery: 'Szybka dostawa', nearby: 'Pobliskie obszary', otherProducts: 'Inne produkty', viewAll: 'Zobacz katalog' },
   };
   const texts = t[validLocale] || t.es;
 
