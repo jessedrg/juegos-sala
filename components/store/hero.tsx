@@ -121,8 +121,8 @@ export function Hero({ locale }: HeroProps) {
         {/* Right - Image */}
         <div className="relative hidden lg:block">
           <Image 
-            src="https://images.unsplash.com/photo-1759302354886-f2c37dd3dd8c?q=80&w=1349&auto=format&fit=crop" 
-            alt="Sauna finlandesa" 
+            src="https://images.unsplash.com/photo-1647633391986-4614f2ee0ca4?q=80&w=2767&auto=format&fit=crop" 
+            alt="Mesa de billar" 
             fill 
             className="object-cover" 
             priority 
