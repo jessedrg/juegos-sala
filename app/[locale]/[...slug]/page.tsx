@@ -15,40 +15,85 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string[] }>;
 }
 
-// Category data for game room products
+// Category data for game room products with localized slugs
 const CATEGORIES = [
   { 
     slug: 'mesas-billar',
+    slugs: { es: 'mesas-billar', en: 'pool-tables', de: 'billardtische', fr: 'tables-billard', it: 'tavoli-biliardo', pt: 'mesas-bilhar', nl: 'pooltafels', pl: 'stoly-bilardowe' },
     image: 'https://images.unsplash.com/photo-1695727008212-5d46172962b6?q=80&w=1336&auto=format&fit=crop',
     price: '800€',
-    names: { es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', fr: 'Tables de Billard' },
-    desc: { es: 'Mesas de billar profesionales y domésticas. Calidad premium garantizada.', en: 'Professional and home pool tables. Premium quality guaranteed.', de: 'Professionelle und Heim-Billardtische. Premium-Qualität garantiert.', fr: 'Tables de billard professionnelles et domestiques. Qualité premium garantie.' }
+    names: { es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', fr: 'Tables de Billard', it: 'Tavoli da Biliardo', pt: 'Mesas de Bilhar', nl: 'Pooltafels', pl: 'Stoły Bilardowe' },
+    desc: { 
+      es: 'Mesas de billar profesionales y domésticas. Calidad premium garantizada.', 
+      en: 'Professional and home pool tables. Premium quality guaranteed.', 
+      de: 'Professionelle und Heim-Billardtische. Premium-Qualität garantiert.', 
+      fr: 'Tables de billard professionnelles et domestiques. Qualité premium garantie.',
+      it: 'Tavoli da biliardo professionali e domestici. Qualità premium garantita.',
+      pt: 'Mesas de bilhar profissionais e domésticas. Qualidade premium garantida.',
+      nl: 'Professionele en huishoudelijke pooltafels. Premium kwaliteit gegarandeerd.',
+      pl: 'Profesjonalne i domowe stoły bilardowe. Gwarantowana jakość premium.'
+    }
   },
   { 
     slug: 'futbolines',
+    slugs: { es: 'futbolines', en: 'foosball-tables', de: 'tischfussball', fr: 'baby-foot', it: 'calcio-balilla', pt: 'matraquilhos', nl: 'tafelvoetbal', pl: 'pilkarzyki' },
     image: 'https://images.unsplash.com/photo-1690073938628-359f281dcabb?q=80&w=1287&auto=format&fit=crop',
     price: '300€',
-    names: { es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfußball', fr: 'Baby-foot' },
-    desc: { es: 'Futbolines para toda la familia. Diversión garantizada.', en: 'Foosball tables for the whole family. Fun guaranteed.', de: 'Tischfußball für die ganze Familie. Spaß garantiert.', fr: 'Baby-foot pour toute la famille. Plaisir garanti.' }
+    names: { es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfußball', fr: 'Baby-foot', it: 'Calcio Balilla', pt: 'Matraquilhos', nl: 'Tafelvoetbal', pl: 'Piłkarzyki' },
+    desc: { 
+      es: 'Futbolines para toda la familia. Diversión garantizada.', 
+      en: 'Foosball tables for the whole family. Fun guaranteed.', 
+      de: 'Tischfußball für die ganze Familie. Spaß garantiert.', 
+      fr: 'Baby-foot pour toute la famille. Plaisir garanti.',
+      it: 'Calcio balilla per tutta la famiglia. Divertimento garantito.',
+      pt: 'Matraquilhos para toda a família. Diversão garantida.',
+      nl: 'Tafelvoetbal voor het hele gezin. Plezier gegarandeerd.',
+      pl: 'Piłkarzyki dla całej rodziny. Gwarantowana zabawa.'
+    }
   },
   { 
     slug: 'dardos',
+    slugs: { es: 'dardos', en: 'dart-boards', de: 'dartscheiben', fr: 'cibles-flechettes', it: 'bersagli-freccette', pt: 'alvos-dardos', nl: 'dartborden', pl: 'tarcze-darta' },
     image: 'https://images.unsplash.com/photo-1638430325415-2f2cc6ae838f?q=80&w=1287&auto=format&fit=crop',
     price: '50€',
-    names: { es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben', fr: 'Cibles de Fléchettes' },
-    desc: { es: 'Dianas electrónicas y clásicas. Para profesionales y aficionados.', en: 'Electronic and classic dart boards. For professionals and amateurs.', de: 'Elektronische und klassische Dartscheiben. Für Profis und Amateure.', fr: 'Cibles électroniques et classiques. Pour professionnels et amateurs.' }
+    names: { es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben', fr: 'Cibles de Fléchettes', it: 'Bersagli Freccette', pt: 'Alvos de Dardos', nl: 'Dartborden', pl: 'Tarcze do Darta' },
+    desc: { 
+      es: 'Dianas electrónicas y clásicas. Para profesionales y aficionados.', 
+      en: 'Electronic and classic dart boards. For professionals and amateurs.', 
+      de: 'Elektronische und klassische Dartscheiben. Für Profis und Amateure.', 
+      fr: 'Cibles électroniques et classiques. Pour professionnels et amateurs.',
+      it: 'Bersagli elettronici e classici. Per professionisti e dilettanti.',
+      pt: 'Alvos eletrônicos e clássicos. Para profissionais e amadores.',
+      nl: 'Elektronische en klassieke dartborden. Voor professionals en amateurs.',
+      pl: 'Elektroniczne i klasyczne tarcze do darta. Dla profesjonalistów i amatorów.'
+    }
   },
   { 
     slug: 'air-hockey',
+    slugs: { es: 'air-hockey', en: 'air-hockey', de: 'airhockey', fr: 'air-hockey', it: 'air-hockey', pt: 'air-hockey', nl: 'airhockey', pl: 'air-hockey' },
     image: 'https://images.unsplash.com/photo-1650916099935-3c32281bc0e3?q=80&w=1287&auto=format&fit=crop',
     price: '200€',
-    names: { es: 'Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische', fr: 'Tables Air Hockey' },
-    desc: { es: 'Mesas de air hockey. Acción y velocidad en tu sala de juegos.', en: 'Air hockey tables. Action and speed in your game room.', de: 'Airhockey-Tische. Action und Geschwindigkeit in Ihrem Spielzimmer.', fr: 'Tables air hockey. Action et vitesse dans votre salle de jeux.' }
+    names: { es: 'Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische', fr: 'Tables Air Hockey', it: 'Tavoli Air Hockey', pt: 'Mesas Air Hockey', nl: 'Airhockey Tafels', pl: 'Stoły do Air Hockey' },
+    desc: { 
+      es: 'Mesas de air hockey. Acción y velocidad en tu sala de juegos.', 
+      en: 'Air hockey tables. Action and speed in your game room.', 
+      de: 'Airhockey-Tische. Action und Geschwindigkeit in Ihrem Spielzimmer.', 
+      fr: 'Tables air hockey. Action et vitesse dans votre salle de jeux.',
+      it: 'Tavoli air hockey. Azione e velocità nella tua sala giochi.',
+      pt: 'Mesas de air hockey. Ação e velocidade na sua sala de jogos.',
+      nl: 'Airhockey tafels. Actie en snelheid in je speelkamer.',
+      pl: 'Stoły do air hockey. Akcja i prędkość w Twoim pokoju gier.'
+    }
   },
 ];
 
+// Find category by any localized slug
 function getCategoryBySlug(slug: string) {
-  return CATEGORIES.find(c => c.slug === slug || slug.includes(c.slug));
+  return CATEGORIES.find(c => {
+    if (c.slug === slug) return true;
+    const allSlugs = Object.values(c.slugs);
+    return allSlugs.includes(slug) || allSlugs.some(s => slug.includes(s));
+  });
 }
 
 const SITE_URL = "https://thegamesroom.io";
@@ -122,11 +167,15 @@ export default async function DynamicPage({ params }: PageProps) {
   };
   
   // Translations
-  const texts: Record<string, { from: string; quote: string; features: string; related: string; warranty: string; delivery: string }> = {
-    es: { from: 'Desde', quote: 'Solicitar Presupuesto', features: 'Características', related: 'Otros productos', warranty: 'Garantía 2 años', delivery: 'Entrega rápida' },
-    en: { from: 'From', quote: 'Request Quote', features: 'Features', related: 'Other products', warranty: '2 year warranty', delivery: 'Fast delivery' },
-    de: { from: 'Ab', quote: 'Angebot Anfordern', features: 'Eigenschaften', related: 'Andere Produkte', warranty: '2 Jahre Garantie', delivery: 'Schnelle Lieferung' },
-    fr: { from: 'À partir de', quote: 'Demander un Devis', features: 'Caractéristiques', related: 'Autres produits', warranty: 'Garantie 2 ans', delivery: 'Livraison rapide' },
+  const texts: Record<string, { from: string; quote: string; features: string; related: string; warranty: string; delivery: string; catalog: string; quality: string }> = {
+    es: { from: 'Desde', quote: 'Solicitar Presupuesto', features: 'Características', related: 'Otros productos', warranty: 'Garantía 2 años', delivery: 'Entrega rápida', catalog: 'Ver Catálogo', quality: 'Calidad Premium' },
+    en: { from: 'From', quote: 'Request Quote', features: 'Features', related: 'Other products', warranty: '2 year warranty', delivery: 'Fast delivery', catalog: 'View Catalog', quality: 'Premium Quality' },
+    de: { from: 'Ab', quote: 'Angebot Anfordern', features: 'Eigenschaften', related: 'Andere Produkte', warranty: '2 Jahre Garantie', delivery: 'Schnelle Lieferung', catalog: 'Katalog Ansehen', quality: 'Premium Qualität' },
+    fr: { from: 'À partir de', quote: 'Demander un Devis', features: 'Caractéristiques', related: 'Autres produits', warranty: 'Garantie 2 ans', delivery: 'Livraison rapide', catalog: 'Voir Catalogue', quality: 'Qualité Premium' },
+    it: { from: 'Da', quote: 'Richiedi Preventivo', features: 'Caratteristiche', related: 'Altri prodotti', warranty: 'Garanzia 2 anni', delivery: 'Consegna rapida', catalog: 'Vedi Catalogo', quality: 'Qualità Premium' },
+    pt: { from: 'Desde', quote: 'Solicitar Orçamento', features: 'Características', related: 'Outros produtos', warranty: 'Garantia 2 anos', delivery: 'Entrega rápida', catalog: 'Ver Catálogo', quality: 'Qualidade Premium' },
+    nl: { from: 'Vanaf', quote: 'Offerte Aanvragen', features: 'Kenmerken', related: 'Andere producten', warranty: '2 jaar garantie', delivery: 'Snelle levering', catalog: 'Bekijk Catalogus', quality: 'Premium Kwaliteit' },
+    pl: { from: 'Od', quote: 'Poproś o Wycenę', features: 'Cechy', related: 'Inne produkty', warranty: 'Gwarancja 2 lata', delivery: 'Szybka dostawa', catalog: 'Zobacz Katalog', quality: 'Jakość Premium' },
   };
   const t = texts[validLocale] || texts.es;
 
@@ -167,7 +216,7 @@ export default async function DynamicPage({ params }: PageProps) {
                     href={`/${locale}`}
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-neutral-200 text-neutral-700 text-sm rounded-full hover:bg-neutral-100 transition-colors"
                   >
-                    Ver Catálogo
+                    {t.catalog}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
