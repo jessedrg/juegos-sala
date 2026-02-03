@@ -77,7 +77,7 @@ export const PRODUCT_CATEGORIES = [
   { 
     slug: 'mesas-billar',
     icon: '🎱',
-    image: 'https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1695727008212-5d46172962b6?q=80&w=1336&auto=format&fit=crop',
     translations: {
       es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', 
       fr: 'Tables de Billard', it: 'Tavoli da Biliardo', pt: 'Mesas de Bilhar',
@@ -88,7 +88,7 @@ export const PRODUCT_CATEGORIES = [
   { 
     slug: 'futbolines',
     icon: '⚽',
-    image: 'https://images.unsplash.com/photo-1595912679957-4d0e0e0e0e0e?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1690073938628-359f281dcabb?q=80&w=1287&auto=format&fit=crop',
     translations: {
       es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfußball',
       fr: 'Baby-foot', it: 'Calcio Balilla', pt: 'Matraquilhos',
@@ -99,7 +99,7 @@ export const PRODUCT_CATEGORIES = [
   { 
     slug: 'dardos',
     icon: '🎯',
-    image: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1638430325415-2f2cc6ae838f?q=80&w=1287&auto=format&fit=crop',
     translations: {
       es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben',
       fr: 'Cibles de Fléchettes', it: 'Bersagli Freccette', pt: 'Alvos de Dardos',
@@ -110,7 +110,7 @@ export const PRODUCT_CATEGORIES = [
   { 
     slug: 'air-hockey',
     icon: '🏒',
-    image: 'https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1650916099935-3c32281bc0e3?q=80&w=1287&auto=format&fit=crop',
     translations: {
       es: 'Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische',
       fr: 'Tables Air Hockey', it: 'Tavoli Air Hockey', pt: 'Mesas Air Hockey',

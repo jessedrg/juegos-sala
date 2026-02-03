@@ -19,28 +19,28 @@ interface PageProps {
 const CATEGORIES = [
   { 
     slug: 'mesas-billar',
-    image: 'https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1695727008212-5d46172962b6?q=80&w=1336&auto=format&fit=crop',
     price: '800€',
     names: { es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', fr: 'Tables de Billard' },
     desc: { es: 'Mesas de billar profesionales y domésticas. Calidad premium garantizada.', en: 'Professional and home pool tables. Premium quality guaranteed.', de: 'Professionelle und Heim-Billardtische. Premium-Qualität garantiert.', fr: 'Tables de billard professionnelles et domestiques. Qualité premium garantie.' }
   },
   { 
     slug: 'futbolines',
-    image: 'https://images.unsplash.com/photo-1595912679957-4d0e0e0e0e0e?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1690073938628-359f281dcabb?q=80&w=1287&auto=format&fit=crop',
     price: '300€',
     names: { es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfußball', fr: 'Baby-foot' },
     desc: { es: 'Futbolines para toda la familia. Diversión garantizada.', en: 'Foosball tables for the whole family. Fun guaranteed.', de: 'Tischfußball für die ganze Familie. Spaß garantiert.', fr: 'Baby-foot pour toute la famille. Plaisir garanti.' }
   },
   { 
     slug: 'dardos',
-    image: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1638430325415-2f2cc6ae838f?q=80&w=1287&auto=format&fit=crop',
     price: '50€',
     names: { es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben', fr: 'Cibles de Fléchettes' },
     desc: { es: 'Dianas electrónicas y clásicas. Para profesionales y aficionados.', en: 'Electronic and classic dart boards. For professionals and amateurs.', de: 'Elektronische und klassische Dartscheiben. Für Profis und Amateure.', fr: 'Cibles électroniques et classiques. Pour professionnels et amateurs.' }
   },
   { 
     slug: 'air-hockey',
-    image: 'https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=1200&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1650916099935-3c32281bc0e3?q=80&w=1287&auto=format&fit=crop',
     price: '200€',
     names: { es: 'Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische', fr: 'Tables Air Hockey' },
     desc: { es: 'Mesas de air hockey. Acción y velocidad en tu sala de juegos.', en: 'Air hockey tables. Action and speed in your game room.', de: 'Airhockey-Tische. Action und Geschwindigkeit in Ihrem Spielzimmer.', fr: 'Tables air hockey. Action et vitesse dans votre salle de jeux.' }
