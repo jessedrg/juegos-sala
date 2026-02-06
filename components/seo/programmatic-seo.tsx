@@ -487,34 +487,34 @@ export function FAQSection({ data }: FAQSectionProps) {
   const faqs = generateFAQs(data);
 
   return (
-    <section className="py-16 bg-neutral-50">
+    <section className="py-16 bg-secondary">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-light text-neutral-900 mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-serif font-light text-foreground mb-8 text-center">
           {t.faq}: {data.product}{data.city ? ` ${t.in} ${data.city}` : ''}
         </h2>
         
-        <div className="space-y-4">
+        <div className="flex flex-col gap-0">
           {faqs.map((faq, index) => (
             <details 
               key={index}
-              className="group bg-white rounded-xl border border-neutral-200 overflow-hidden"
+              className="group border-b border-border"
               itemScope
               itemProp="mainEntity"
               itemType="https://schema.org/Question"
             >
               <summary 
-                className="flex items-center justify-between p-6 cursor-pointer hover:bg-neutral-50 transition-colors"
+                className="flex items-center justify-between gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
                 itemProp="name"
               >
-                <span className="font-medium text-neutral-900 pr-4">{faq.question}</span>
-                <span className="text-neutral-400 group-open:rotate-180 transition-transform">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span className="text-[15px] font-medium text-foreground pr-4">{faq.question}</span>
+                <span className="text-muted-foreground group-open:rotate-180 transition-transform flex-shrink-0">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
               </summary>
               <div 
-                className="px-6 pb-6 text-neutral-600"
+                className="pb-5 pr-8 text-sm text-muted-foreground leading-relaxed"
                 itemScope
                 itemProp="acceptedAnswer"
                 itemType="https://schema.org/Answer"
@@ -543,9 +543,9 @@ export function NearbyCities({ data }: NearbyCitiesProps) {
   if (!data.nearbyCities || data.nearbyCities.length === 0) return null;
 
   return (
-    <section className="py-12 border-t border-neutral-100">
+    <section className="py-12 border-t border-border">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-xl font-medium text-neutral-900 mb-6">
+        <h2 className="text-xl font-medium text-foreground mb-6">
           {t.nearbyAreas}
         </h2>
         
@@ -554,10 +554,10 @@ export function NearbyCities({ data }: NearbyCitiesProps) {
             <a
               key={city.slug}
               href={`/${data.locale}/${data.productSlug}-${city.slug}/`}
-              className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-full text-sm text-neutral-700 transition-colors"
+              className="px-4 py-2 bg-secondary hover:bg-muted text-sm text-foreground transition-colors"
             >
               {data.product} {t.in} {city.name}
-              {city.distance && <span className="text-neutral-400 ml-1">({city.distance} km)</span>}
+              {city.distance && <span className="text-muted-foreground ml-1">({city.distance} km)</span>}
             </a>
           ))}
         </div>
@@ -577,16 +577,16 @@ interface BreadcrumbsProps {
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <nav aria-label="Breadcrumb" className="py-4">
-      <ol className="flex items-center gap-2 text-sm text-neutral-500">
+      <ol className="flex items-center gap-2 text-[11px] text-muted-foreground">
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-2">
             {index > 0 && <span>/</span>}
             {item.url ? (
-              <a href={item.url} className="hover:text-neutral-900 transition-colors">
+              <a href={item.url} className="hover:text-foreground transition-colors">
                 {item.name}
               </a>
             ) : (
-              <span className="text-neutral-900">{item.name}</span>
+              <span className="text-foreground">{item.name}</span>
             )}
           </li>
         ))}
@@ -611,34 +611,34 @@ export function PriceTable({ data, products }: PriceTableProps) {
   return (
     <section className="py-12">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-2xl font-light text-neutral-900 mb-6">
+        <h2 className="text-2xl font-serif font-light text-foreground mb-6">
           {t.prices} {data.product}{data.city ? ` ${t.in} ${data.city}` : ''} {year}
         </h2>
         
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="border-b border-neutral-200">
-                <th className="text-left py-4 px-4 font-medium text-neutral-900">Modelo</th>
-                <th className="text-left py-4 px-4 font-medium text-neutral-900">{t.price} {t.from}</th>
-                <th className="text-left py-4 px-4 font-medium text-neutral-900">{t.price} {t.to}</th>
-                <th className="text-left py-4 px-4 font-medium text-neutral-900">{t.shipping}</th>
+              <tr className="border-b border-border">
+                <th className="text-left py-4 px-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground font-medium">Modelo</th>
+                <th className="text-left py-4 px-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground font-medium">{t.price} {t.from}</th>
+                <th className="text-left py-4 px-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground font-medium">{t.price} {t.to}</th>
+                <th className="text-left py-4 px-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground font-medium">{t.shipping}</th>
               </tr>
             </thead>
             <tbody>
               {products.map((product, index) => (
-                <tr key={index} className="border-b border-neutral-100 hover:bg-neutral-50">
-                  <td className="py-4 px-4 text-neutral-700">{product.name}</td>
-                  <td className="py-4 px-4 text-neutral-900 font-medium">{product.priceMin}€</td>
-                  <td className="py-4 px-4 text-neutral-900 font-medium">{product.priceMax}€</td>
-                  <td className="py-4 px-4 text-green-600">{t.free}</td>
+                <tr key={index} className="border-b border-border/50 hover:bg-secondary/50 transition-colors">
+                  <td className="py-4 px-4 text-sm text-muted-foreground">{product.name}</td>
+                  <td className="py-4 px-4 text-sm text-foreground font-medium">{product.priceMin}{'EUR'}</td>
+                  <td className="py-4 px-4 text-sm text-foreground font-medium">{product.priceMax}{'EUR'}</td>
+                  <td className="py-4 px-4 text-sm text-accent font-medium">{t.free}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
         
-        <p className="text-xs text-neutral-400 mt-4">
+        <p className="text-xs text-muted-foreground mt-4">
           {t.updated} {new Date().toLocaleDateString(data.locale)}. {t.vatIncluded}.
         </p>
       </div>

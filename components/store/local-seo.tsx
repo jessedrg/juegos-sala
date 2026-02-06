@@ -142,9 +142,9 @@ export function LocalSEO({ locale }: LocalSEOProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Trust Section */}
-      <section className="py-16 bg-[#fafaf8]">
+      <section className="py-16 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-serif text-neutral-900 text-center mb-12 text-balance">
+          <h2 className="text-2xl md:text-3xl font-serif font-light text-foreground text-center mb-12 text-balance">
             {content.trust.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -198,7 +198,7 @@ export function LocalSEO({ locale }: LocalSEOProps) {
       </section>
 
       {/* FAQ Section - Structured for rich snippets */}
-      <section className="py-16 md:py-24 bg-[#fafaf8]">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-4">
             <HelpCircle className="w-5 h-5 text-accent" strokeWidth={1.5} />

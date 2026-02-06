@@ -75,7 +75,28 @@ export async function GET(_request: Request, { params }: RouteParams) {
     }
   }
 
-  // 5. Game room-specific modifiers
+  // 5. NEW: /comprar/[product]/[city] transactional pages (highest intent)
+  for (const cat of CATEGORIES) {
+    for (const city of cities.slice(0, 30)) {
+      urls.push(`${prefix}/comprar/${cat}/${city}`);
+    }
+  }
+
+  // 6. NEW: /[intent]/[product] guide pages
+  const intentSlugs: Record<string, string[]> = {
+    es: ['mejor', 'guia', 'comparar', 'precios', 'profesional', 'barato', 'comprar', 'opiniones'],
+    en: ['best', 'guide', 'compare', 'prices', 'professional', 'cheap', 'buy', 'reviews'],
+    de: ['kaufen'],
+    fr: ['acheter'],
+  };
+  const localeIntents = intentSlugs[cleanLocale] || [];
+  for (const intentSlug of localeIntents) {
+    for (const cat of CATEGORIES) {
+      urls.push(`${prefix}/${intentSlug}/${cat}`);
+    }
+  }
+
+  // 7. Game room-specific modifiers
   const gameModifiers: Record<string, string[]> = {
     es: ['profesional', 'domestico', 'barato', 'premium', 'oferta', 'calidad'],
     en: ['professional', 'home', 'cheap', 'premium', 'sale', 'quality'],

@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter, DM_Serif_Display } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -10,9 +10,9 @@ const inter = Inter({
   display: 'swap'
 });
 
-const dmSerif = DM_Serif_Display({ 
+const playfair = Playfair_Display({ 
   subsets: ["latin"], 
-  weight: ["400"],
+  weight: ["300", "400", "500", "600"],
   variable: '--font-serif',
   display: 'swap'
 });
@@ -96,7 +96,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${inter.variable} ${dmSerif.variable} font-sans antialiased`}>
+        <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
         <IntercomProvider />
         <Analytics />

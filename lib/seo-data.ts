@@ -716,83 +716,83 @@ export const CATEGORY_TRANSLATIONS: Record<Locale, Record<Category, string>> = {
 // =============================================================================
 
 export const SEARCH_INTENTS = [
-  'buy', 'best', 'cheap', 'premium', 'organic', 'online', 'delivery',
-  'shop', 'store', 'price', 'quality', 'legal', 'lab-tested', 'natural',
-  'pure', 'strongest', 'reviews', 'near-me', 'wholesale', 'bulk'
+  'buy', 'best', 'cheap', 'premium', 'professional', 'online', 'delivery',
+  'shop', 'store', 'price', 'quality', 'home', 'for-sale', 'compare',
+  'guide', 'install', 'reviews', 'near-me', 'wholesale', 'used'
 ] as const;
 
 export type SearchIntent = typeof SEARCH_INTENTS[number];
 
 export const INTENT_TRANSLATIONS: Record<Locale, Record<SearchIntent, string>> = {
   es: {
-    buy: 'comprar', best: 'mejor', cheap: 'barato', premium: 'premium', organic: 'orgánico',
-    online: 'online', delivery: 'envío', shop: 'tienda', store: 'tienda', price: 'precio',
-    quality: 'calidad', legal: 'legal', 'lab-tested': 'testado', natural: 'natural',
-    pure: 'puro', strongest: 'más fuerte', reviews: 'opiniones', 'near-me': 'cerca de mi',
-    wholesale: 'mayorista', bulk: 'al por mayor'
+    buy: 'comprar', best: 'mejor', cheap: 'barato', premium: 'premium', professional: 'profesional',
+    online: 'online', delivery: 'envio', shop: 'tienda', store: 'tienda', price: 'precio',
+    quality: 'calidad', home: 'para-casa', 'for-sale': 'en-venta', compare: 'comparar',
+    guide: 'guia', install: 'instalacion', reviews: 'opiniones', 'near-me': 'cerca-de-mi',
+    wholesale: 'mayorista', used: 'segunda-mano'
   },
   en: {
-    buy: 'buy', best: 'best', cheap: 'cheap', premium: 'premium', organic: 'organic',
+    buy: 'buy', best: 'best', cheap: 'cheap', premium: 'premium', professional: 'professional',
     online: 'online', delivery: 'delivery', shop: 'shop', store: 'store', price: 'price',
-    quality: 'quality', legal: 'legal', 'lab-tested': 'lab tested', natural: 'natural',
-    pure: 'pure', strongest: 'strongest', reviews: 'reviews', 'near-me': 'near me',
-    wholesale: 'wholesale', bulk: 'bulk'
+    quality: 'quality', home: 'for-home', 'for-sale': 'for-sale', compare: 'compare',
+    guide: 'guide', install: 'installation', reviews: 'reviews', 'near-me': 'near-me',
+    wholesale: 'wholesale', used: 'used'
   },
   de: {
-    buy: 'kaufen', best: 'beste', cheap: 'günstig', premium: 'premium', organic: 'bio',
-    online: 'online', delivery: 'lieferung', shop: 'shop', store: 'geschäft', price: 'preis',
-    quality: 'qualität', legal: 'legal', 'lab-tested': 'laborgetestet', natural: 'natürlich',
-    pure: 'rein', strongest: 'stärkste', reviews: 'bewertungen', 'near-me': 'in der nähe',
-    wholesale: 'großhandel', bulk: 'großmenge'
+    buy: 'kaufen', best: 'beste', cheap: 'guenstig', premium: 'premium', professional: 'professionell',
+    online: 'online', delivery: 'lieferung', shop: 'shop', store: 'geschaeft', price: 'preis',
+    quality: 'qualitaet', home: 'fuer-zuhause', 'for-sale': 'zu-verkaufen', compare: 'vergleichen',
+    guide: 'ratgeber', install: 'installation', reviews: 'bewertungen', 'near-me': 'in-der-naehe',
+    wholesale: 'grosshandel', used: 'gebraucht'
   },
   fr: {
-    buy: 'acheter', best: 'meilleur', cheap: 'pas cher', premium: 'premium', organic: 'bio',
-    online: 'en ligne', delivery: 'livraison', shop: 'boutique', store: 'magasin', price: 'prix',
-    quality: 'qualité', legal: 'légal', 'lab-tested': 'testé en labo', natural: 'naturel',
-    pure: 'pur', strongest: 'plus fort', reviews: 'avis', 'near-me': 'près de moi',
-    wholesale: 'grossiste', bulk: 'en gros'
+    buy: 'acheter', best: 'meilleur', cheap: 'pas-cher', premium: 'premium', professional: 'professionnel',
+    online: 'en-ligne', delivery: 'livraison', shop: 'boutique', store: 'magasin', price: 'prix',
+    quality: 'qualite', home: 'pour-maison', 'for-sale': 'a-vendre', compare: 'comparer',
+    guide: 'guide', install: 'installation', reviews: 'avis', 'near-me': 'pres-de-moi',
+    wholesale: 'grossiste', used: 'occasion'
   },
   it: {
-    buy: 'comprare', best: 'migliore', cheap: 'economico', premium: 'premium', organic: 'biologico',
+    buy: 'comprare', best: 'migliore', cheap: 'economico', premium: 'premium', professional: 'professionale',
     online: 'online', delivery: 'consegna', shop: 'negozio', store: 'negozio', price: 'prezzo',
-    quality: 'qualità', legal: 'legale', 'lab-tested': 'testato', natural: 'naturale',
-    pure: 'puro', strongest: 'più forte', reviews: 'recensioni', 'near-me': 'vicino a me',
-    wholesale: 'ingrosso', bulk: 'all\'ingrosso'
+    quality: 'qualita', home: 'per-casa', 'for-sale': 'in-vendita', compare: 'confronto',
+    guide: 'guida', install: 'installazione', reviews: 'recensioni', 'near-me': 'vicino-a-me',
+    wholesale: 'ingrosso', used: 'usato'
   },
   pt: {
-    buy: 'comprar', best: 'melhor', cheap: 'barato', premium: 'premium', organic: 'orgânico',
-    online: 'online', delivery: 'entrega', shop: 'loja', store: 'loja', price: 'preço',
-    quality: 'qualidade', legal: 'legal', 'lab-tested': 'testado', natural: 'natural',
-    pure: 'puro', strongest: 'mais forte', reviews: 'avaliações', 'near-me': 'perto de mim',
-    wholesale: 'atacado', bulk: 'a granel'
+    buy: 'comprar', best: 'melhor', cheap: 'barato', premium: 'premium', professional: 'profissional',
+    online: 'online', delivery: 'entrega', shop: 'loja', store: 'loja', price: 'preco',
+    quality: 'qualidade', home: 'para-casa', 'for-sale': 'a-venda', compare: 'comparar',
+    guide: 'guia', install: 'instalacao', reviews: 'avaliacoes', 'near-me': 'perto-de-mim',
+    wholesale: 'atacado', used: 'usado'
   },
   nl: {
-    buy: 'kopen', best: 'beste', cheap: 'goedkoop', premium: 'premium', organic: 'biologisch',
+    buy: 'kopen', best: 'beste', cheap: 'goedkoop', premium: 'premium', professional: 'professioneel',
     online: 'online', delivery: 'levering', shop: 'winkel', store: 'winkel', price: 'prijs',
-    quality: 'kwaliteit', legal: 'legaal', 'lab-tested': 'labgetest', natural: 'natuurlijk',
-    pure: 'puur', strongest: 'sterkste', reviews: 'reviews', 'near-me': 'bij mij in de buurt',
-    wholesale: 'groothandel', bulk: 'bulk'
+    quality: 'kwaliteit', home: 'voor-thuis', 'for-sale': 'te-koop', compare: 'vergelijken',
+    guide: 'gids', install: 'installatie', reviews: 'reviews', 'near-me': 'bij-mij',
+    wholesale: 'groothandel', used: 'tweedehands'
   },
   pl: {
-    buy: 'kupić', best: 'najlepszy', cheap: 'tani', premium: 'premium', organic: 'organiczny',
+    buy: 'kupic', best: 'najlepszy', cheap: 'tani', premium: 'premium', professional: 'profesjonalny',
     online: 'online', delivery: 'dostawa', shop: 'sklep', store: 'sklep', price: 'cena',
-    quality: 'jakość', legal: 'legalny', 'lab-tested': 'testowany', natural: 'naturalny',
-    pure: 'czysty', strongest: 'najsilniejszy', reviews: 'opinie', 'near-me': 'blisko mnie',
-    wholesale: 'hurtownia', bulk: 'hurt'
+    quality: 'jakosc', home: 'do-domu', 'for-sale': 'na-sprzedaz', compare: 'porownaj',
+    guide: 'poradnik', install: 'instalacja', reviews: 'opinie', 'near-me': 'blisko-mnie',
+    wholesale: 'hurtownia', used: 'uzywany'
   },
   cs: {
-    buy: 'koupit', best: 'nejlepší', cheap: 'levný', premium: 'premium', organic: 'bio',
-    online: 'online', delivery: 'doručení', shop: 'obchod', store: 'obchod', price: 'cena',
-    quality: 'kvalita', legal: 'legální', 'lab-tested': 'testováno', natural: 'přírodní',
-    pure: 'čistý', strongest: 'nejsilnější', reviews: 'recenze', 'near-me': 'poblíž',
-    wholesale: 'velkoobchod', bulk: 'velké množství'
+    buy: 'koupit', best: 'nejlepsi', cheap: 'levny', premium: 'premium', professional: 'profesionalni',
+    online: 'online', delivery: 'doruceni', shop: 'obchod', store: 'obchod', price: 'cena',
+    quality: 'kvalita', home: 'domu', 'for-sale': 'na-prodej', compare: 'srovnani',
+    guide: 'pruvodce', install: 'instalace', reviews: 'recenze', 'near-me': 'pobliz',
+    wholesale: 'velkoobchod', used: 'pouzity'
   },
   el: {
-    buy: 'αγορά', best: 'καλύτερο', cheap: 'φθηνό', premium: 'premium', organic: 'βιολογικό',
-    online: 'online', delivery: 'παράδοση', shop: 'κατάστημα', store: 'κατάστημα', price: 'τιμή',
-    quality: 'ποιότητα', legal: 'νόμιμο', 'lab-tested': 'εργαστηριακά', natural: 'φυσικό',
-    pure: 'καθαρό', strongest: 'ισχυρότερο', reviews: 'κριτικές', 'near-me': 'κοντά μου',
-    wholesale: 'χονδρική', bulk: 'χύμα'
+    buy: 'agora', best: 'kalytero', cheap: 'fthino', premium: 'premium', professional: 'epaggelmatiko',
+    online: 'online', delivery: 'paradosi', shop: 'katastima', store: 'katastima', price: 'timi',
+    quality: 'poiotita', home: 'gia-spiti', 'for-sale': 'pros-polisi', compare: 'sygkrisi',
+    guide: 'odigos', install: 'egkatastasi', reviews: 'kritikes', 'near-me': 'konta-mou',
+    wholesale: 'chondriki', used: 'metachirismeno'
   },
 };
 

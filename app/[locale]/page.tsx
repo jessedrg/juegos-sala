@@ -35,8 +35,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonicalUrl = `/${locale}`;
   
   return {
-    title: `The Games Room | ${title}`,
-    description,
+    title: `The Games Room | ${title} | ${locale === 'es' ? 'Envio Gratis Europa' : locale === 'de' ? 'Kostenloser Versand' : 'Free Shipping Europe'}`,
+    description: `${description} ${locale === 'es' ? 'Desde 50EUR. Garantia 2 anos.' : locale === 'de' ? 'Ab 50EUR. 2 Jahre Garantie.' : 'From EUR50. 2-year warranty.'}`.slice(0, 160),
     alternates: {
       canonical: canonicalUrl,
       languages: Object.fromEntries(
