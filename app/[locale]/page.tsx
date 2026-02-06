@@ -6,6 +6,8 @@ import { Features } from "@/components/store/features";
 import { Categories } from "@/components/store/categories";
 import { ShopifyProducts } from "@/components/store/shopify-products"; // Updated import
 import { CTA } from "@/components/store/cta";
+import { Testimonials } from "@/components/store/testimonials";
+import { BuyingGuide } from "@/components/store/buying-guide";
 import { LocalSEO } from "@/components/store/local-seo";
 import { Footer } from "@/components/store/footer";
 import { SUPPORTED_LOCALES, TRANSLATIONS, type Locale } from "@/lib/seo-data";
@@ -33,8 +35,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonicalUrl = `/${locale}`;
   
   return {
-    title: `Saunas y Spas | ${title}`,
-    description,
+    title: `The Games Room | ${title} | ${locale === 'es' ? 'Envio Gratis Europa' : locale === 'de' ? 'Kostenloser Versand' : 'Free Shipping Europe'}`,
+    description: `${description} ${locale === 'es' ? 'Desde 50EUR. Garantia 2 anos.' : locale === 'de' ? 'Ab 50EUR. 2 Jahre Garantie.' : 'From EUR50. 2-year warranty.'}`.slice(0, 160),
     alternates: {
       canonical: canonicalUrl,
       languages: Object.fromEntries(
@@ -42,26 +44,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ),
     },
     openGraph: {
-      title: `Saunas y Spas | ${title}`,
+      title: `The Games Room | ${title}`,
       description,
       url: canonicalUrl,
-      siteName: 'Saunas y Spas',
+      siteName: 'The Games Room',
       locale: locale === 'es' ? 'es_ES' : locale === 'en' ? 'en_US' : `${locale}_${locale.toUpperCase()}`,
       type: 'website',
       images: [
         {
-          url: '/og-image.jpg',
+          url: 'https://images.unsplash.com/photo-1647633391986-4614f2ee0ca4?w=1200&h=630&fit=crop&q=80',
           width: 1200,
           height: 630,
-          alt: `Saunas y Spas - ${title}`,
+          alt: `The Games Room - ${title}`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Saunas y Spas | ${title}`,
+      title: `The Games Room | ${title}`,
       description,
-      images: ['/og-image.jpg'],
+      images: ['https://images.unsplash.com/photo-1647633391986-4614f2ee0ca4?w=1200&h=630&fit=crop&q=80'],
     },
     robots: {
       index: true,
@@ -77,19 +79,94 @@ export default async function LocalePage({ params }: PageProps) {
     notFound();
   }
 
-const validLocale = locale as Locale;
+  const validLocale = locale as Locale;
   const t = TRANSLATIONS[validLocale];
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Games Room",
+    "url": "https://thegamesroom.io",
+    "logo": "https://thegamesroom.io/icon.svg",
+    "description": t.hero.subtitle,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["Spanish", "English", "German", "French", "Italian", "Portuguese", "Dutch", "Polish"]
+    },
+    "sameAs": []
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Games Room",
+    "url": "https://thegamesroom.io",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `https://thegamesroom.io/${locale}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": t.products.title,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": locale === 'es' ? "Mesas de Billar" : "Pool Tables",
+        "url": `https://thegamesroom.io/${locale}/mesas-billar`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": locale === 'es' ? "Futbolines" : "Foosball Tables",
+        "url": `https://thegamesroom.io/${locale}/futbolines`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": locale === 'es' ? "Dardos" : "Dart Boards",
+        "url": `https://thegamesroom.io/${locale}/dardos`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Air Hockey",
+        "url": `https://thegamesroom.io/${locale}/air-hockey`
+      }
+    ]
+  };
+
   return (
-    <main className="min-h-screen bg-background">
-      <Header locale={validLocale} />
-      <Hero locale={validLocale} />
-      <Features locale={validLocale} />
-      <Categories locale={validLocale} />
-      <ShopifyProducts locale={validLocale} title={t.products.title} />
-      <CTA locale={validLocale} />
-      <LocalSEO locale={validLocale} />
-      <Footer locale={validLocale} />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <main className="min-h-screen bg-background">
+        <Header locale={validLocale} />
+        <Hero locale={validLocale} />
+        <Features locale={validLocale} />
+        <Categories locale={validLocale} />
+        <ShopifyProducts locale={validLocale} title={t.products.title} />
+        <Testimonials locale={validLocale} />
+        <BuyingGuide locale={validLocale} />
+        <CTA locale={validLocale} />
+        <LocalSEO locale={validLocale} />
+        <Footer locale={validLocale} />
+      </main>
+    </>
   );
 }

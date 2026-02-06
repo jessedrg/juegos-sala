@@ -1,5 +1,6 @@
 // =============================================================================
-// SAUNAS & SPAS - PREMIUM SEO DATABASE
+// THE GAMES ROOM - PREMIUM SEO DATABASE
+// Mesas de billar, futbolines, dardos, air hockey
 // Multi-language, Multi-country, High-Intent Keywords
 // =============================================================================
 
@@ -715,83 +716,83 @@ export const CATEGORY_TRANSLATIONS: Record<Locale, Record<Category, string>> = {
 // =============================================================================
 
 export const SEARCH_INTENTS = [
-  'buy', 'best', 'cheap', 'premium', 'organic', 'online', 'delivery',
-  'shop', 'store', 'price', 'quality', 'legal', 'lab-tested', 'natural',
-  'pure', 'strongest', 'reviews', 'near-me', 'wholesale', 'bulk'
+  'buy', 'best', 'cheap', 'premium', 'professional', 'online', 'delivery',
+  'shop', 'store', 'price', 'quality', 'home', 'for-sale', 'compare',
+  'guide', 'install', 'reviews', 'near-me', 'wholesale', 'used'
 ] as const;
 
 export type SearchIntent = typeof SEARCH_INTENTS[number];
 
 export const INTENT_TRANSLATIONS: Record<Locale, Record<SearchIntent, string>> = {
   es: {
-    buy: 'comprar', best: 'mejor', cheap: 'barato', premium: 'premium', organic: 'orgánico',
-    online: 'online', delivery: 'envío', shop: 'tienda', store: 'tienda', price: 'precio',
-    quality: 'calidad', legal: 'legal', 'lab-tested': 'testado', natural: 'natural',
-    pure: 'puro', strongest: 'más fuerte', reviews: 'opiniones', 'near-me': 'cerca de mi',
-    wholesale: 'mayorista', bulk: 'al por mayor'
+    buy: 'comprar', best: 'mejor', cheap: 'barato', premium: 'premium', professional: 'profesional',
+    online: 'online', delivery: 'envio', shop: 'tienda', store: 'tienda', price: 'precio',
+    quality: 'calidad', home: 'para-casa', 'for-sale': 'en-venta', compare: 'comparar',
+    guide: 'guia', install: 'instalacion', reviews: 'opiniones', 'near-me': 'cerca-de-mi',
+    wholesale: 'mayorista', used: 'segunda-mano'
   },
   en: {
-    buy: 'buy', best: 'best', cheap: 'cheap', premium: 'premium', organic: 'organic',
+    buy: 'buy', best: 'best', cheap: 'cheap', premium: 'premium', professional: 'professional',
     online: 'online', delivery: 'delivery', shop: 'shop', store: 'store', price: 'price',
-    quality: 'quality', legal: 'legal', 'lab-tested': 'lab tested', natural: 'natural',
-    pure: 'pure', strongest: 'strongest', reviews: 'reviews', 'near-me': 'near me',
-    wholesale: 'wholesale', bulk: 'bulk'
+    quality: 'quality', home: 'for-home', 'for-sale': 'for-sale', compare: 'compare',
+    guide: 'guide', install: 'installation', reviews: 'reviews', 'near-me': 'near-me',
+    wholesale: 'wholesale', used: 'used'
   },
   de: {
-    buy: 'kaufen', best: 'beste', cheap: 'günstig', premium: 'premium', organic: 'bio',
-    online: 'online', delivery: 'lieferung', shop: 'shop', store: 'geschäft', price: 'preis',
-    quality: 'qualität', legal: 'legal', 'lab-tested': 'laborgetestet', natural: 'natürlich',
-    pure: 'rein', strongest: 'stärkste', reviews: 'bewertungen', 'near-me': 'in der nähe',
-    wholesale: 'großhandel', bulk: 'großmenge'
+    buy: 'kaufen', best: 'beste', cheap: 'guenstig', premium: 'premium', professional: 'professionell',
+    online: 'online', delivery: 'lieferung', shop: 'shop', store: 'geschaeft', price: 'preis',
+    quality: 'qualitaet', home: 'fuer-zuhause', 'for-sale': 'zu-verkaufen', compare: 'vergleichen',
+    guide: 'ratgeber', install: 'installation', reviews: 'bewertungen', 'near-me': 'in-der-naehe',
+    wholesale: 'grosshandel', used: 'gebraucht'
   },
   fr: {
-    buy: 'acheter', best: 'meilleur', cheap: 'pas cher', premium: 'premium', organic: 'bio',
-    online: 'en ligne', delivery: 'livraison', shop: 'boutique', store: 'magasin', price: 'prix',
-    quality: 'qualité', legal: 'légal', 'lab-tested': 'testé en labo', natural: 'naturel',
-    pure: 'pur', strongest: 'plus fort', reviews: 'avis', 'near-me': 'près de moi',
-    wholesale: 'grossiste', bulk: 'en gros'
+    buy: 'acheter', best: 'meilleur', cheap: 'pas-cher', premium: 'premium', professional: 'professionnel',
+    online: 'en-ligne', delivery: 'livraison', shop: 'boutique', store: 'magasin', price: 'prix',
+    quality: 'qualite', home: 'pour-maison', 'for-sale': 'a-vendre', compare: 'comparer',
+    guide: 'guide', install: 'installation', reviews: 'avis', 'near-me': 'pres-de-moi',
+    wholesale: 'grossiste', used: 'occasion'
   },
   it: {
-    buy: 'comprare', best: 'migliore', cheap: 'economico', premium: 'premium', organic: 'biologico',
+    buy: 'comprare', best: 'migliore', cheap: 'economico', premium: 'premium', professional: 'professionale',
     online: 'online', delivery: 'consegna', shop: 'negozio', store: 'negozio', price: 'prezzo',
-    quality: 'qualità', legal: 'legale', 'lab-tested': 'testato', natural: 'naturale',
-    pure: 'puro', strongest: 'più forte', reviews: 'recensioni', 'near-me': 'vicino a me',
-    wholesale: 'ingrosso', bulk: 'all\'ingrosso'
+    quality: 'qualita', home: 'per-casa', 'for-sale': 'in-vendita', compare: 'confronto',
+    guide: 'guida', install: 'installazione', reviews: 'recensioni', 'near-me': 'vicino-a-me',
+    wholesale: 'ingrosso', used: 'usato'
   },
   pt: {
-    buy: 'comprar', best: 'melhor', cheap: 'barato', premium: 'premium', organic: 'orgânico',
-    online: 'online', delivery: 'entrega', shop: 'loja', store: 'loja', price: 'preço',
-    quality: 'qualidade', legal: 'legal', 'lab-tested': 'testado', natural: 'natural',
-    pure: 'puro', strongest: 'mais forte', reviews: 'avaliações', 'near-me': 'perto de mim',
-    wholesale: 'atacado', bulk: 'a granel'
+    buy: 'comprar', best: 'melhor', cheap: 'barato', premium: 'premium', professional: 'profissional',
+    online: 'online', delivery: 'entrega', shop: 'loja', store: 'loja', price: 'preco',
+    quality: 'qualidade', home: 'para-casa', 'for-sale': 'a-venda', compare: 'comparar',
+    guide: 'guia', install: 'instalacao', reviews: 'avaliacoes', 'near-me': 'perto-de-mim',
+    wholesale: 'atacado', used: 'usado'
   },
   nl: {
-    buy: 'kopen', best: 'beste', cheap: 'goedkoop', premium: 'premium', organic: 'biologisch',
+    buy: 'kopen', best: 'beste', cheap: 'goedkoop', premium: 'premium', professional: 'professioneel',
     online: 'online', delivery: 'levering', shop: 'winkel', store: 'winkel', price: 'prijs',
-    quality: 'kwaliteit', legal: 'legaal', 'lab-tested': 'labgetest', natural: 'natuurlijk',
-    pure: 'puur', strongest: 'sterkste', reviews: 'reviews', 'near-me': 'bij mij in de buurt',
-    wholesale: 'groothandel', bulk: 'bulk'
+    quality: 'kwaliteit', home: 'voor-thuis', 'for-sale': 'te-koop', compare: 'vergelijken',
+    guide: 'gids', install: 'installatie', reviews: 'reviews', 'near-me': 'bij-mij',
+    wholesale: 'groothandel', used: 'tweedehands'
   },
   pl: {
-    buy: 'kupić', best: 'najlepszy', cheap: 'tani', premium: 'premium', organic: 'organiczny',
+    buy: 'kupic', best: 'najlepszy', cheap: 'tani', premium: 'premium', professional: 'profesjonalny',
     online: 'online', delivery: 'dostawa', shop: 'sklep', store: 'sklep', price: 'cena',
-    quality: 'jakość', legal: 'legalny', 'lab-tested': 'testowany', natural: 'naturalny',
-    pure: 'czysty', strongest: 'najsilniejszy', reviews: 'opinie', 'near-me': 'blisko mnie',
-    wholesale: 'hurtownia', bulk: 'hurt'
+    quality: 'jakosc', home: 'do-domu', 'for-sale': 'na-sprzedaz', compare: 'porownaj',
+    guide: 'poradnik', install: 'instalacja', reviews: 'opinie', 'near-me': 'blisko-mnie',
+    wholesale: 'hurtownia', used: 'uzywany'
   },
   cs: {
-    buy: 'koupit', best: 'nejlepší', cheap: 'levný', premium: 'premium', organic: 'bio',
-    online: 'online', delivery: 'doručení', shop: 'obchod', store: 'obchod', price: 'cena',
-    quality: 'kvalita', legal: 'legální', 'lab-tested': 'testováno', natural: 'přírodní',
-    pure: 'čistý', strongest: 'nejsilnější', reviews: 'recenze', 'near-me': 'poblíž',
-    wholesale: 'velkoobchod', bulk: 'velké množství'
+    buy: 'koupit', best: 'nejlepsi', cheap: 'levny', premium: 'premium', professional: 'profesionalni',
+    online: 'online', delivery: 'doruceni', shop: 'obchod', store: 'obchod', price: 'cena',
+    quality: 'kvalita', home: 'domu', 'for-sale': 'na-prodej', compare: 'srovnani',
+    guide: 'pruvodce', install: 'instalace', reviews: 'recenze', 'near-me': 'pobliz',
+    wholesale: 'velkoobchod', used: 'pouzity'
   },
   el: {
-    buy: 'αγορά', best: 'καλύτερο', cheap: 'φθηνό', premium: 'premium', organic: 'βιολογικό',
-    online: 'online', delivery: 'παράδοση', shop: 'κατάστημα', store: 'κατάστημα', price: 'τιμή',
-    quality: 'ποιότητα', legal: 'νόμιμο', 'lab-tested': 'εργαστηριακά', natural: 'φυσικό',
-    pure: 'καθαρό', strongest: 'ισχυρότερο', reviews: 'κριτικές', 'near-me': 'κοντά μου',
-    wholesale: 'χονδρική', bulk: 'χύμα'
+    buy: 'agora', best: 'kalytero', cheap: 'fthino', premium: 'premium', professional: 'epaggelmatiko',
+    online: 'online', delivery: 'paradosi', shop: 'katastima', store: 'katastima', price: 'timi',
+    quality: 'poiotita', home: 'gia-spiti', 'for-sale': 'pros-polisi', compare: 'sygkrisi',
+    guide: 'odigos', install: 'egkatastasi', reviews: 'kritikes', 'near-me': 'konta-mou',
+    wholesale: 'chondriki', used: 'metachirismeno'
   },
 };
 
@@ -818,93 +819,93 @@ export const TRANSLATIONS: Record<Locale, {
   nav: { home: string; shop: string; about: string; contact: string };
 }> = {
   es: {
-    hero: { title: 'SaunaSpa.io\npara tu Hogar', subtitle: 'Saunas finlandesas, jacuzzis y spas de la más alta calidad. Instalación profesional, garantía incluida.', cta: 'Ver Catálogo' },
-    features: { quality: 'Calidad Premium', qualityDesc: 'Maderas nobles y materiales de primera calidad', shipping: 'Envío e Instalación', shippingDesc: 'Entrega e instalación profesional incluida', support: 'Asesoría Experta', supportDesc: 'Te ayudamos a elegir el modelo perfecto', lab: 'Garantía 5 Años', labDesc: 'Garantía completa en todos los productos' },
-    products: { title: 'Nuestra Selección', viewAll: 'Ver Todo' },
-    categories: { title: 'Categorías' },
-    cta: { title: 'Tu Oasis de Bienestar en Casa', subtitle: 'Únete a miles de hogares que ya disfrutan', button: 'Solicitar Presupuesto' },
-    footer: { about: 'Sobre Nosotros', contact: 'Contacto', legal: 'Aviso Legal', privacy: 'Privacidad', terms: 'Términos' },
-    nav: { home: 'Inicio', shop: 'Catálogo', about: 'Nosotros', contact: 'Contacto' }
+    hero: { title: 'The Games Room\npara tu Hogar', subtitle: 'Mesas de billar, futbolines profesionales, dianas de dardos y mesas de air hockey. Envio gratis y garantia 2 anos.', cta: 'Ver Catalogo' },
+    features: { quality: 'Calidad Premium', qualityDesc: 'Materiales de primera calidad y acabados profesionales', shipping: 'Envio Gratis', shippingDesc: 'Entrega gratuita en toda Espana', support: 'Asesoria Experta', supportDesc: 'Te ayudamos a elegir el modelo perfecto', lab: 'Garantia 2 Anos', labDesc: 'Garantia completa en todos los productos' },
+    products: { title: 'Productos Destacados', viewAll: 'Ver Todo' },
+    categories: { title: 'Categorias' },
+    cta: { title: 'Tu Sala de Juegos Perfecta', subtitle: 'Presupuesto sin compromiso. Envio e instalacion incluidos.', button: 'Solicitar Presupuesto' },
+    footer: { about: 'Sobre Nosotros', contact: 'Contacto', legal: 'Aviso Legal', privacy: 'Privacidad', terms: 'Terminos' },
+    nav: { home: 'Inicio', shop: 'Catalogo', about: 'Nosotros', contact: 'Contacto' }
   },
   en: {
-    hero: { title: 'Saunas & Spas\nfor Your Home', subtitle: 'Finnish saunas, hot tubs and spas of the highest quality. Professional installation, warranty included.', cta: 'View Catalog' },
-    features: { quality: 'Premium Quality', qualityDesc: 'Noble woods and first-class materials', shipping: 'Delivery & Installation', shippingDesc: 'Professional delivery and installation included', support: 'Expert Guidance', supportDesc: 'We help you choose the perfect model', lab: '5 Year Warranty', labDesc: 'Full warranty on all products' },
-    products: { title: 'Our Selection', viewAll: 'View All' },
+    hero: { title: 'The Games Room\nfor Your Home', subtitle: 'Pool tables, foosball tables, dart boards and air hockey tables. Free shipping and 2-year warranty.', cta: 'View Catalog' },
+    features: { quality: 'Premium Quality', qualityDesc: 'Professional-grade materials and finishes', shipping: 'Free Shipping', shippingDesc: 'Free delivery across Europe', support: 'Expert Guidance', supportDesc: 'We help you choose the perfect model', lab: '2 Year Warranty', labDesc: 'Full warranty on all products' },
+    products: { title: 'Featured Products', viewAll: 'View All' },
     categories: { title: 'Categories' },
-    cta: { title: 'Your Wellness Oasis at Home', subtitle: 'Join thousands of homes already enjoying', button: 'Request Quote' },
+    cta: { title: 'Your Perfect Game Room', subtitle: 'Free quote. Shipping and installation included.', button: 'Request Quote' },
     footer: { about: 'About Us', contact: 'Contact', legal: 'Legal Notice', privacy: 'Privacy', terms: 'Terms' },
     nav: { home: 'Home', shop: 'Catalog', about: 'About', contact: 'Contact' }
   },
   de: {
-    hero: { title: 'Saunas & Spas\nfür Ihr Zuhause', subtitle: 'Finnische Saunas, Whirlpools und Spas höchster Qualität. Professionelle Installation, Garantie inklusive.', cta: 'Katalog Ansehen' },
-    features: { quality: 'Premium Qualität', qualityDesc: 'Edle Hölzer und erstklassige Materialien', shipping: 'Lieferung & Montage', shippingDesc: 'Professionelle Lieferung und Montage inklusive', support: 'Expertenberatung', supportDesc: 'Wir helfen Ihnen das perfekte Modell zu wählen', lab: '5 Jahre Garantie', labDesc: 'Volle Garantie auf alle Produkte' },
-    products: { title: 'Unsere Auswahl', viewAll: 'Alle Anzeigen' },
+    hero: { title: 'The Games Room\nfur Ihr Zuhause', subtitle: 'Billardtische, Tischfussball, Dartscheiben und Airhockey-Tische. Kostenloser Versand und 2 Jahre Garantie.', cta: 'Katalog Ansehen' },
+    features: { quality: 'Premium Qualitat', qualityDesc: 'Professionelle Materialien und Verarbeitung', shipping: 'Kostenloser Versand', shippingDesc: 'Kostenlose Lieferung in ganz Europa', support: 'Expertenberatung', supportDesc: 'Wir helfen Ihnen das perfekte Modell zu wahlen', lab: '2 Jahre Garantie', labDesc: 'Volle Garantie auf alle Produkte' },
+    products: { title: 'Ausgewahlte Produkte', viewAll: 'Alle Anzeigen' },
     categories: { title: 'Kategorien' },
-    cta: { title: 'Ihre Wellness-Oase zu Hause', subtitle: 'Schließen Sie sich tausenden zufriedenen Haushalten an', button: 'Angebot Anfordern' },
-    footer: { about: 'Über Uns', contact: 'Kontakt', legal: 'Impressum', privacy: 'Datenschutz', terms: 'AGB' },
-    nav: { home: 'Startseite', shop: 'Katalog', about: 'Über Uns', contact: 'Kontakt' }
+    cta: { title: 'Ihr Perfektes Spielzimmer', subtitle: 'Kostenloses Angebot. Versand und Installation inklusive.', button: 'Angebot Anfordern' },
+    footer: { about: 'Uber Uns', contact: 'Kontakt', legal: 'Impressum', privacy: 'Datenschutz', terms: 'AGB' },
+    nav: { home: 'Startseite', shop: 'Katalog', about: 'Uber Uns', contact: 'Kontakt' }
   },
   fr: {
-    hero: { title: 'Saunas & Spas\npour Votre Maison', subtitle: 'Saunas finlandais, jacuzzis et spas de la plus haute qualité. Installation professionnelle, garantie incluse.', cta: 'Voir le Catalogue' },
-    features: { quality: 'Qualité Premium', qualityDesc: 'Bois nobles et matériaux de première qualité', shipping: 'Livraison & Installation', shippingDesc: 'Livraison et installation professionnelle incluses', support: 'Conseil Expert', supportDesc: 'Nous vous aidons à choisir le modèle parfait', lab: 'Garantie 5 Ans', labDesc: 'Garantie complète sur tous les produits' },
-    products: { title: 'Notre Sélection', viewAll: 'Voir Tout' },
-    categories: { title: 'Catégories' },
-    cta: { title: 'Votre Oasis de Bien-être à la Maison', subtitle: 'Rejoignez des milliers de foyers satisfaits', button: 'Demander un Devis' },
-    footer: { about: 'À Propos', contact: 'Contact', legal: 'Mentions Légales', privacy: 'Confidentialité', terms: 'CGV' },
-    nav: { home: 'Accueil', shop: 'Catalogue', about: 'À Propos', contact: 'Contact' }
+    hero: { title: 'The Games Room\npour Votre Maison', subtitle: 'Tables de billard, baby-foot, cibles de flechettes et tables de air hockey. Livraison gratuite et garantie 2 ans.', cta: 'Voir le Catalogue' },
+    features: { quality: 'Qualite Premium', qualityDesc: 'Materiaux professionnels et finitions soignees', shipping: 'Livraison Gratuite', shippingDesc: 'Livraison gratuite dans toute l\'Europe', support: 'Conseil Expert', supportDesc: 'Nous vous aidons a choisir le modele parfait', lab: 'Garantie 2 Ans', labDesc: 'Garantie complete sur tous les produits' },
+    products: { title: 'Produits Vedettes', viewAll: 'Voir Tout' },
+    categories: { title: 'Categories' },
+    cta: { title: 'Votre Salle de Jeux Parfaite', subtitle: 'Devis gratuit. Livraison et installation incluses.', button: 'Demander un Devis' },
+    footer: { about: 'A Propos', contact: 'Contact', legal: 'Mentions Legales', privacy: 'Confidentialite', terms: 'CGV' },
+    nav: { home: 'Accueil', shop: 'Catalogue', about: 'A Propos', contact: 'Contact' }
   },
   it: {
-    hero: { title: 'Saune & Spa\nper la Tua Casa', subtitle: 'Saune finlandesi, vasche idromassaggio e spa della massima qualità. Installazione professionale, garanzia inclusa.', cta: 'Vedi Catalogo' },
-    features: { quality: 'Qualità Premium', qualityDesc: 'Legni pregiati e materiali di prima qualità', shipping: 'Consegna & Installazione', shippingDesc: 'Consegna e installazione professionale incluse', support: 'Consulenza Esperta', supportDesc: 'Ti aiutiamo a scegliere il modello perfetto', lab: 'Garanzia 5 Anni', labDesc: 'Garanzia completa su tutti i prodotti' },
-    products: { title: 'La Nostra Selezione', viewAll: 'Vedi Tutto' },
+    hero: { title: 'The Games Room\nper la Tua Casa', subtitle: 'Tavoli da biliardo, calcio balilla, bersagli per freccette e tavoli da air hockey. Spedizione gratuita e garanzia 2 anni.', cta: 'Vedi Catalogo' },
+    features: { quality: 'Qualita Premium', qualityDesc: 'Materiali professionali e finiture di pregio', shipping: 'Spedizione Gratuita', shippingDesc: 'Consegna gratuita in tutta Europa', support: 'Consulenza Esperta', supportDesc: 'Ti aiutiamo a scegliere il modello perfetto', lab: 'Garanzia 2 Anni', labDesc: 'Garanzia completa su tutti i prodotti' },
+    products: { title: 'Prodotti in Evidenza', viewAll: 'Vedi Tutto' },
     categories: { title: 'Categorie' },
-    cta: { title: 'La Tua Oasi di Benessere a Casa', subtitle: 'Unisciti a migliaia di case soddisfatte', button: 'Richiedi Preventivo' },
+    cta: { title: 'La Tua Sala Giochi Perfetta', subtitle: 'Preventivo gratuito. Spedizione e installazione incluse.', button: 'Richiedi Preventivo' },
     footer: { about: 'Chi Siamo', contact: 'Contatto', legal: 'Note Legali', privacy: 'Privacy', terms: 'Termini' },
     nav: { home: 'Home', shop: 'Catalogo', about: 'Chi Siamo', contact: 'Contatto' }
   },
   pt: {
-    hero: { title: 'Saunas & Spas\npara a Sua Casa', subtitle: 'Saunas finlandesas, jacuzzis e spas da mais alta qualidade. Instalação profissional, garantia incluída.', cta: 'Ver Catálogo' },
-    features: { quality: 'Qualidade Premium', qualityDesc: 'Madeiras nobres e materiais de primeira qualidade', shipping: 'Entrega & Instalação', shippingDesc: 'Entrega e instalação profissional incluídas', support: 'Orientação Especializada', supportDesc: 'Ajudamos a escolher o modelo perfeito', lab: 'Garantia 5 Anos', labDesc: 'Garantia completa em todos os produtos' },
-    products: { title: 'Nossa Seleção', viewAll: 'Ver Tudo' },
+    hero: { title: 'The Games Room\npara a Sua Casa', subtitle: 'Mesas de bilhar, matraquilhos, alvos de dardos e mesas de air hockey. Envio gratis e garantia 2 anos.', cta: 'Ver Catalogo' },
+    features: { quality: 'Qualidade Premium', qualityDesc: 'Materiais profissionais e acabamentos de qualidade', shipping: 'Envio Gratis', shippingDesc: 'Entrega gratuita em toda a Europa', support: 'Orientacao Especializada', supportDesc: 'Ajudamos a escolher o modelo perfeito', lab: 'Garantia 2 Anos', labDesc: 'Garantia completa em todos os produtos' },
+    products: { title: 'Produtos em Destaque', viewAll: 'Ver Tudo' },
     categories: { title: 'Categorias' },
-    cta: { title: 'O Seu Oásis de Bem-estar em Casa', subtitle: 'Junte-se a milhares de lares satisfeitos', button: 'Pedir Orçamento' },
-    footer: { about: 'Sobre Nós', contact: 'Contato', legal: 'Aviso Legal', privacy: 'Privacidade', terms: 'Termos' },
-    nav: { home: 'Início', shop: 'Catálogo', about: 'Sobre', contact: 'Contato' }
+    cta: { title: 'A Sua Sala de Jogos Perfeita', subtitle: 'Orcamento gratis. Envio e instalacao incluidos.', button: 'Pedir Orcamento' },
+    footer: { about: 'Sobre Nos', contact: 'Contato', legal: 'Aviso Legal', privacy: 'Privacidade', terms: 'Termos' },
+    nav: { home: 'Inicio', shop: 'Catalogo', about: 'Sobre', contact: 'Contato' }
   },
   nl: {
-    hero: { title: 'Sauna\'s & Spa\'s\nvoor Uw Huis', subtitle: 'Finse sauna\'s, jacuzzi\'s en spa\'s van de hoogste kwaliteit. Professionele installatie, garantie inbegrepen.', cta: 'Bekijk Catalogus' },
-    features: { quality: 'Premium Kwaliteit', qualityDesc: 'Edele houtsoorten en eersteklas materialen', shipping: 'Levering & Installatie', shippingDesc: 'Professionele levering en installatie inbegrepen', support: 'Expert Advies', supportDesc: 'Wij helpen u het perfecte model te kiezen', lab: '5 Jaar Garantie', labDesc: 'Volledige garantie op alle producten' },
-    products: { title: 'Onze Selectie', viewAll: 'Bekijk Alles' },
-    categories: { title: 'Categorieën' },
-    cta: { title: 'Uw Wellness Oase Thuis', subtitle: 'Sluit u aan bij duizenden tevreden huishoudens', button: 'Offerte Aanvragen' },
+    hero: { title: 'The Games Room\nvoor Uw Huis', subtitle: 'Pooltafels, tafelvoetbal, dartborden en airhockey tafels. Gratis verzending en 2 jaar garantie.', cta: 'Bekijk Catalogus' },
+    features: { quality: 'Premium Kwaliteit', qualityDesc: 'Professionele materialen en afwerking', shipping: 'Gratis Verzending', shippingDesc: 'Gratis levering in heel Europa', support: 'Expert Advies', supportDesc: 'Wij helpen u het perfecte model te kiezen', lab: '2 Jaar Garantie', labDesc: 'Volledige garantie op alle producten' },
+    products: { title: 'Uitgelichte Producten', viewAll: 'Bekijk Alles' },
+    categories: { title: 'Categorieen' },
+    cta: { title: 'Uw Perfecte Speelkamer', subtitle: 'Gratis offerte. Verzending en installatie inbegrepen.', button: 'Offerte Aanvragen' },
     footer: { about: 'Over Ons', contact: 'Contact', legal: 'Juridisch', privacy: 'Privacy', terms: 'Voorwaarden' },
     nav: { home: 'Home', shop: 'Catalogus', about: 'Over Ons', contact: 'Contact' }
   },
   pl: {
-    hero: { title: 'Sauny & Spa\ndla Twojego Domu', subtitle: 'Sauny fińskie, jacuzzi i spa najwyższej jakości. Profesjonalna instalacja, gwarancja w cenie.', cta: 'Zobacz Katalog' },
-    features: { quality: 'Jakość Premium', qualityDesc: 'Szlachetne drewno i materiały najwyższej jakości', shipping: 'Dostawa & Montaż', shippingDesc: 'Profesjonalna dostawa i montaż w cenie', support: 'Porada Eksperta', supportDesc: 'Pomagamy wybrać idealny model', lab: 'Gwarancja 5 Lat', labDesc: 'Pełna gwarancja na wszystkie produkty' },
-    products: { title: 'Nasz Wybór', viewAll: 'Zobacz Wszystko' },
+    hero: { title: 'The Games Room\ndla Twojego Domu', subtitle: 'Stoly bilardowe, pilkarzyki, tarcze do darta i stoly do air hockey. Darmowa wysylka i gwarancja 2 lata.', cta: 'Zobacz Katalog' },
+    features: { quality: 'Jakosc Premium', qualityDesc: 'Profesjonalne materialy i wykonczenie', shipping: 'Darmowa Wysylka', shippingDesc: 'Darmowa dostawa w calej Europie', support: 'Porada Eksperta', supportDesc: 'Pomagamy wybrac idealny model', lab: 'Gwarancja 2 Lata', labDesc: 'Pelna gwarancja na wszystkie produkty' },
+    products: { title: 'Wyrozniamy Produkty', viewAll: 'Zobacz Wszystko' },
     categories: { title: 'Kategorie' },
-    cta: { title: 'Twoja Oaza Wellness w Domu', subtitle: 'Dołącz do tysięcy zadowolonych domów', button: 'Poproś o Wycenę' },
-    footer: { about: 'O Nas', contact: 'Kontakt', legal: 'Nota Prawna', privacy: 'Prywatność', terms: 'Regulamin' },
-    nav: { home: 'Strona główna', shop: 'Katalog', about: 'O Nas', contact: 'Kontakt' }
+    cta: { title: 'Twoj Idealny Pokoj Gier', subtitle: 'Bezplatna wycena. Wysylka i instalacja w cenie.', button: 'Popros o Wycene' },
+    footer: { about: 'O Nas', contact: 'Kontakt', legal: 'Nota Prawna', privacy: 'Prywatnosc', terms: 'Regulamin' },
+    nav: { home: 'Strona glowna', shop: 'Katalog', about: 'O Nas', contact: 'Kontakt' }
   },
   cs: {
-    hero: { title: 'Sauny & Spa\npro Váš Domov', subtitle: 'Finské sauny, vířivky a spa nejvyšší kvality. Profesionální instalace, záruka v ceně.', cta: 'Zobrazit Katalog' },
-    features: { quality: 'Premium Kvalita', qualityDesc: 'Ušlechtilé dřevo a prvotřídní materiály', shipping: 'Dodání & Instalace', shippingDesc: 'Profesionální dodání a instalace v ceně', support: 'Odborné Poradenství', supportDesc: 'Pomůžeme vám vybrat ideální model', lab: 'Záruka 5 Let', labDesc: 'Plná záruka na všechny produkty' },
-    products: { title: 'Náš Výběr', viewAll: 'Zobrazit Vše' },
+    hero: { title: 'The Games Room\npro Vas Domov', subtitle: 'Kulecnikove stoly, stolni fotbaly, sipkove tarce a stoly na air hockey. Doprava zdarma a zaruka 2 roky.', cta: 'Zobrazit Katalog' },
+    features: { quality: 'Premium Kvalita', qualityDesc: 'Profesionalni materialy a zpracovani', shipping: 'Doprava Zdarma', shippingDesc: 'Doprava zdarma po cele Evrope', support: 'Odborne Poradenstvi', supportDesc: 'Pomuzeme vam vybrat idealni model', lab: 'Zaruka 2 Roky', labDesc: 'Plna zaruka na vsechny produkty' },
+    products: { title: 'Vybrany Sortiment', viewAll: 'Zobrazit Vse' },
     categories: { title: 'Kategorie' },
-    cta: { title: 'Vaše Wellness Oáza Doma', subtitle: 'Připojte se k tisícům spokojených domácností', button: 'Požádat o Nabídku' },
-    footer: { about: 'O Nás', contact: 'Kontakt', legal: 'Právní Upozornění', privacy: 'Soukromí', terms: 'Podmínky' },
-    nav: { home: 'Domů', shop: 'Katalog', about: 'O Nás', contact: 'Kontakt' }
+    cta: { title: 'Vas Idealni Herni Pokoj', subtitle: 'Nabidka zdarma. Doprava a instalace v cene.', button: 'Pozadat o Nabidku' },
+    footer: { about: 'O Nas', contact: 'Kontakt', legal: 'Pravni Upozorneni', privacy: 'Soukromi', terms: 'Podminky' },
+    nav: { home: 'Domu', shop: 'Katalog', about: 'O Nas', contact: 'Kontakt' }
   },
   el: {
-    hero: { title: 'Σάουνες & Σπα\nγια το Σπίτι σας', subtitle: 'Φινλανδικές σάουνες, τζακούζι και σπα υψηλότερης ποιότητας. Επαγγελματική εγκατάσταση, εγγύηση περιλαμβάνεται.', cta: 'Δείτε τον Κατάλογο' },
-    features: { quality: 'Premium Ποιότητα', qualityDesc: 'Ευγενή ξύλα και υλικά πρώτης ποιότητας', shipping: 'Παράδοση & Εγκατάσταση', shippingDesc: 'Επαγγελματική παράδοση και εγκατάσταση περιλαμβάνονται', support: 'Ειδική Καθοδήγηση', supportDesc: 'Σας βοηθάμε να επιλέξετε το τέλειο μοντέλο', lab: 'Εγγύηση 5 Ετών', labDesc: 'Πλήρης εγγύηση σε όλα τα προϊόντα' },
-    products: { title: 'Η Επιλογή Μας', viewAll: 'Δείτε Όλα' },
-    categories: { title: 'Κατηγορίες' },
-    cta: { title: 'Η Όαση Ευεξίας σας στο Σπίτι', subtitle: 'Γίνετε μέλος χιλιάδων ικανοποιημένων σπιτιών', button: 'Ζητήστε Προσφορά' },
-    footer: { about: 'Σχετικά με Εμάς', contact: 'Επικοινωνία', legal: 'Νομική Σημείωση', privacy: 'Απόρρητο', terms: 'Όροι' },
-    nav: { home: 'Αρχική', shop: 'Κατάλογος', about: 'Σχετικά', contact: 'Επικοινωνία' }
+    hero: { title: 'The Games Room\ngia to Spiti sas', subtitle: 'Trapezia mpiliardou, podosfairakia, stochoi velakia kai trapezia air hockey. Dorean apostoli kai eggyisi 2 eton.', cta: 'Deite ton Katalogo' },
+    features: { quality: 'Premium Poiotita', qualityDesc: 'Epaggelmatika ylika kai finirisma', shipping: 'Dorean Apostoli', shippingDesc: 'Dorean paradosi se oli tin Evropi', support: 'Eidiki Kathodigisi', supportDesc: 'Sas voithame na epilexete to teleio montelo', lab: 'Eggyisi 2 Eton', labDesc: 'Pliri eggyisi se ola ta proionta' },
+    products: { title: 'Epilegmena Proionta', viewAll: 'Deite Ola' },
+    categories: { title: 'Katigories' },
+    cta: { title: 'I Teleia Ethesa Paixnidion', subtitle: 'Dorean prosfora. Apostoli kai egkatastasi perilamvanontai.', button: 'Zitiste Prosfora' },
+    footer: { about: 'Sxetika me Emas', contact: 'Epikoinonia', legal: 'Nomiki Simeiosi', privacy: 'Aporrito', terms: 'Oroi' },
+    nav: { home: 'Arxiki', shop: 'Katalogos', about: 'Sxetika', contact: 'Epikoinonia' }
   },
 };

@@ -47,7 +47,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, categoria, ciudad } = await params
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://saunasyspas.com"
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thegamesroom.io"
 
   const category = getCategoryBySlug(categoria)
   const city = getCityBySlug(ciudad)
@@ -58,8 +58,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const categoryName = category.translations[validLocale] || category.translations.en
-  const title = `${categoryName} ${city.name} | ${category.priceRange}`
-  const description = generateCityDescription(city, category, validLocale)
+  const year = new Date().getFullYear()
+  
+  // High-intent transactional title patterns
+  const titleTemplates: Record<string, string> = {
+    es: `Comprar ${categoryName} en ${city.name} | Precios ${year} | Envio Gratis`,
+    en: `Buy ${categoryName} in ${city.name} | ${year} Prices | Free Shipping`,
+    de: `${categoryName} in ${city.name} Kaufen | Preise ${year} | Kostenloser Versand`,
+    fr: `Acheter ${categoryName} a ${city.name} | Prix ${year} | Livraison Gratuite`,
+    it: `Comprare ${categoryName} a ${city.name} | Prezzi ${year} | Spedizione Gratuita`,
+    pt: `Comprar ${categoryName} em ${city.name} | Precos ${year} | Envio Gratis`,
+    nl: `${categoryName} ${city.name} Kopen | Prijzen ${year} | Gratis Verzending`,
+    pl: `Kup ${categoryName} w ${city.name} | Ceny ${year} | Darmowa Wysylka`,
+  }
+  
+  const descTemplates: Record<string, string> = {
+    es: `${categoryName} en ${city.name}. Precios desde ${category.priceRange}EUR. Envio gratis a ${city.name}, garantia 2 anos, instalacion profesional. Presupuesto sin compromiso.`,
+    en: `${categoryName} in ${city.name}. Prices from EUR${category.priceRange}. Free shipping to ${city.name}, 2-year warranty, professional installation. Free quote.`,
+    de: `${categoryName} in ${city.name}. Preise ab ${category.priceRange}EUR. Kostenloser Versand, 2 Jahre Garantie, professionelle Installation.`,
+    fr: `${categoryName} a ${city.name}. Prix des ${category.priceRange}EUR. Livraison gratuite, garantie 2 ans, installation professionnelle.`,
+  }
+  
+  const title = titleTemplates[validLocale] || titleTemplates.es
+  const description = (descTemplates[validLocale] || descTemplates.es || generateCityDescription(city, category, validLocale)).slice(0, 160)
 
   return {
     title,
@@ -71,6 +92,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       type: "website",
+      siteName: 'The Games Room',
     },
     robots: {
       index: true,
@@ -112,7 +134,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: '¿Por qué elegirnos?',
       deliveryTo: 'Envío a',
       deliveryDesc: 'Entrega e instalación profesional incluida',
-      warrantyTitle: 'Garantía 5 Años',
+      warrantyTitle: 'Garantia 2 Anos',
       warrantyDesc: 'Garantía completa en todos nuestros productos',
       fastInstall: 'Instalación Rápida',
       fastInstallDesc: 'Equipo de instaladores profesionales',
@@ -140,7 +162,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: 'Why choose us?',
       deliveryTo: 'Delivery to',
       deliveryDesc: 'Professional delivery and installation included',
-      warrantyTitle: '5 Year Warranty',
+      warrantyTitle: '2 Year Warranty',
       warrantyDesc: 'Full warranty on all products',
       fastInstall: 'Fast Installation',
       fastInstallDesc: 'Professional installation team',
@@ -168,7 +190,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: 'Warum uns wählen?',
       deliveryTo: 'Lieferung nach',
       deliveryDesc: 'Professionelle Lieferung und Installation inklusive',
-      warrantyTitle: '5 Jahre Garantie',
+      warrantyTitle: '2 Jahre Garantie',
       warrantyDesc: 'Volle Garantie auf alle Produkte',
       fastInstall: 'Schnelle Installation',
       fastInstallDesc: 'Professionelles Installationsteam',
@@ -196,7 +218,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: 'Pourquoi nous choisir?',
       deliveryTo: 'Livraison à',
       deliveryDesc: 'Livraison et installation professionnelles incluses',
-      warrantyTitle: 'Garantie 5 Ans',
+      warrantyTitle: 'Garantie 2 Ans',
       warrantyDesc: 'Garantie complète sur tous les produits',
       fastInstall: 'Installation Rapide',
       fastInstallDesc: 'Équipe d\'installation professionnelle',
@@ -221,45 +243,45 @@ export default async function CityProductPage({ params }: PageProps) {
       <Header locale={validLocale} />
       
       <main className="flex-1 pt-16">
-        {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0">
-            <Image
-              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop"
-              alt={`${categoryName} ${city.name}`}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
-          </div>
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-6 lg:px-12 pt-6">
+          <ol className="flex items-center gap-2 text-[11px] text-muted-foreground">
+            <li><Link href={`/${locale}`} className="hover:text-foreground transition-colors">Home</Link></li>
+            <li><span className="mx-1">/</span></li>
+            <li><Link href={`/${locale}/${categoria}`} className="hover:text-foreground transition-colors">{categoryName}</Link></li>
+            <li><span className="mx-1">/</span></li>
+            <li className="text-foreground">{city.name}</li>
+          </ol>
+        </nav>
 
-          <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Hero Section */}
+        <section className="py-16 lg:py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="max-w-2xl">
               {/* Location badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full mb-6">
-                <MapPin className="h-4 w-4 text-accent" />
-                <span className="text-sm font-medium">{city.name}, {city.country}</span>
+              <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-8">
+                <MapPin className="h-3.5 w-3.5" />
+                <span>{city.name}, {city.country}</span>
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-tight mb-6">
-                {categoryName}<br />
-                <span className="text-muted-foreground">{texts.inCity} {city.name}</span>
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] mb-6">
+                {categoryName}
+                <span className="block italic text-muted-foreground mt-1">{texts.inCity} {city.name}</span>
               </h1>
 
-              <p className="text-lg text-muted-foreground mb-8 max-w-xl">
+              <p className="text-base text-muted-foreground mb-8 max-w-xl leading-relaxed">
                 {description}
               </p>
 
               {/* Price range */}
               <div className="mb-8">
-                <p className="text-sm text-muted-foreground mb-1">{texts.priceRange}</p>
-                <p className="text-3xl font-serif font-light">{category.priceRange}</p>
+                <p className="text-[11px] uppercase tracking-[0.15em] text-muted-foreground mb-1">{texts.priceRange}</p>
+                <p className="text-3xl font-serif font-light text-foreground">{category.priceRange}{'EUR'}</p>
               </div>
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="h-14 px-8 text-xs uppercase tracking-[0.2em] font-medium rounded-none">
+                <Button size="lg" className="h-14 px-8 text-xs uppercase tracking-[0.2em] font-medium rounded-none bg-foreground text-background hover:bg-foreground/90">
                   <Phone className="mr-2 h-4 w-4" />
                   {texts.requestQuote}
                 </Button>
@@ -269,7 +291,7 @@ export default async function CityProductPage({ params }: PageProps) {
                   className="h-14 px-8 text-xs uppercase tracking-[0.2em] font-medium rounded-none"
                   asChild
                 >
-                  <Link href={`/${locale}/productos/${categoria}`}>
+                  <Link href={`/${locale}/${categoria}`}>
                     {texts.viewCatalog}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -296,7 +318,7 @@ export default async function CityProductPage({ params }: PageProps) {
                 <p className="text-sm text-muted-foreground">{texts.rating}</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-serif font-light mb-2">5 {texts.years}</p>
+                <p className="text-3xl font-serif font-light mb-2">2 {texts.years}</p>
                 <p className="text-sm text-muted-foreground">{texts.warranty}</p>
               </div>
             </div>

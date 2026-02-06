@@ -1,4 +1,3 @@
-import { Shield, Truck, Wrench, HeadphonesIcon } from "lucide-react";
 import { type Locale } from "@/lib/seo-data";
 
 interface FeaturesProps {
@@ -6,104 +5,86 @@ interface FeaturesProps {
 }
 
 export function Features({ locale }: FeaturesProps) {
-  const texts: Record<string, { title: string; features: { title: string; desc: string }[] }> = {
+  const texts: Record<string, { features: { title: string; desc: string }[] }> = {
     es: {
-      title: 'Por qué elegirnos',
       features: [
-        { title: 'Garantía 2 años', desc: 'Cobertura completa en todos los productos' },
-        { title: 'Envío incluido', desc: 'Entrega gratuita en toda España' },
-        { title: 'Instalación profesional', desc: 'Equipo técnico especializado' },
-        { title: 'Soporte 24/7', desc: 'Atención al cliente siempre disponible' },
+        { title: 'Garantia 2 anos', desc: 'Cobertura completa en todos los productos sin excepciones.' },
+        { title: 'Envio incluido', desc: 'Entrega profesional a domicilio en toda Europa.' },
+        { title: 'Instalacion experta', desc: 'Equipo tecnico especializado a su servicio.' },
+        { title: 'Atencion personalizada', desc: 'Asesoria de expertos para elegir lo mejor.' },
       ]
     },
     en: {
-      title: 'Why choose us',
       features: [
-        { title: '2 year warranty', desc: 'Full coverage on all products' },
-        { title: 'Free shipping', desc: 'Free delivery nationwide' },
-        { title: 'Professional installation', desc: 'Specialized technical team' },
-        { title: '24/7 Support', desc: 'Customer service always available' },
+        { title: '2 year warranty', desc: 'Full coverage on all products without exceptions.' },
+        { title: 'Free shipping', desc: 'Professional home delivery across Europe.' },
+        { title: 'Expert installation', desc: 'Specialized technical team at your service.' },
+        { title: 'Personal service', desc: 'Expert advice to help you choose the best.' },
       ]
     },
     de: {
-      title: 'Warum uns wählen',
       features: [
-        { title: '2 Jahre Garantie', desc: 'Volle Abdeckung auf alle Produkte' },
-        { title: 'Kostenloser Versand', desc: 'Kostenlose Lieferung deutschlandweit' },
-        { title: 'Professionelle Installation', desc: 'Spezialisiertes technisches Team' },
-        { title: '24/7 Support', desc: 'Kundenservice immer verfügbar' },
+        { title: '2 Jahre Garantie', desc: 'Volle Abdeckung auf alle Produkte ohne Ausnahmen.' },
+        { title: 'Kostenloser Versand', desc: 'Professionelle Lieferung in ganz Europa.' },
+        { title: 'Experteninstallation', desc: 'Spezialisiertes technisches Team.' },
+        { title: 'Persoenlicher Service', desc: 'Expertenberatung fuer die beste Wahl.' },
       ]
     },
     fr: {
-      title: 'Pourquoi nous choisir',
       features: [
-        { title: 'Garantie 2 ans', desc: 'Couverture complète sur tous les produits' },
-        { title: 'Livraison gratuite', desc: 'Livraison gratuite dans toute la France' },
-        { title: 'Installation professionnelle', desc: 'Équipe technique spécialisée' },
-        { title: 'Support 24/7', desc: 'Service client toujours disponible' },
+        { title: 'Garantie 2 ans', desc: 'Couverture complete sur tous les produits.' },
+        { title: 'Livraison gratuite', desc: 'Livraison professionnelle dans toute l\'Europe.' },
+        { title: 'Installation experte', desc: 'Equipe technique specialisee a votre service.' },
+        { title: 'Service personnel', desc: 'Conseil expert pour choisir le meilleur.' },
       ]
     },
     it: {
-      title: 'Perché sceglierci',
       features: [
-        { title: 'Garanzia 2 anni', desc: 'Copertura completa su tutti i prodotti' },
-        { title: 'Spedizione gratuita', desc: 'Consegna gratuita in tutta Italia' },
-        { title: 'Installazione professionale', desc: 'Team tecnico specializzato' },
-        { title: 'Supporto 24/7', desc: 'Servizio clienti sempre disponibile' },
+        { title: 'Garanzia 2 anni', desc: 'Copertura completa su tutti i prodotti.' },
+        { title: 'Spedizione gratuita', desc: 'Consegna professionale in tutta Europa.' },
+        { title: 'Installazione esperta', desc: 'Team tecnico specializzato al vostro servizio.' },
+        { title: 'Servizio personale', desc: 'Consulenza esperta per la scelta migliore.' },
       ]
     },
     pt: {
-      title: 'Por que nos escolher',
       features: [
-        { title: 'Garantia 2 anos', desc: 'Cobertura completa em todos os produtos' },
-        { title: 'Envio grátis', desc: 'Entrega gratuita em todo Portugal' },
-        { title: 'Instalação profissional', desc: 'Equipe técnica especializada' },
-        { title: 'Suporte 24/7', desc: 'Atendimento ao cliente sempre disponível' },
+        { title: 'Garantia 2 anos', desc: 'Cobertura completa em todos os produtos.' },
+        { title: 'Envio gratis', desc: 'Entrega profissional em toda a Europa.' },
+        { title: 'Instalacao especializada', desc: 'Equipe tecnica especializada.' },
+        { title: 'Atendimento pessoal', desc: 'Orientacao especializada para a melhor escolha.' },
       ]
     },
     nl: {
-      title: 'Waarom ons kiezen',
       features: [
-        { title: '2 jaar garantie', desc: 'Volledige dekking op alle producten' },
-        { title: 'Gratis verzending', desc: 'Gratis levering in heel Nederland' },
-        { title: 'Professionele installatie', desc: 'Gespecialiseerd technisch team' },
-        { title: '24/7 Ondersteuning', desc: 'Klantenservice altijd beschikbaar' },
+        { title: '2 jaar garantie', desc: 'Volledige dekking op alle producten.' },
+        { title: 'Gratis verzending', desc: 'Professionele levering in heel Europa.' },
+        { title: 'Expertinstallatie', desc: 'Gespecialiseerd technisch team.' },
+        { title: 'Persoonlijke service', desc: 'Deskundig advies voor de beste keuze.' },
       ]
     },
     pl: {
-      title: 'Dlaczego my',
       features: [
-        { title: 'Gwarancja 2 lata', desc: 'Pełne pokrycie wszystkich produktów' },
-        { title: 'Darmowa wysyłka', desc: 'Bezpłatna dostawa w całej Polsce' },
-        { title: 'Profesjonalna instalacja', desc: 'Wyspecjalizowany zespół techniczny' },
-        { title: 'Wsparcie 24/7', desc: 'Obsługa klienta zawsze dostępna' },
+        { title: 'Gwarancja 2 lata', desc: 'Pelne pokrycie wszystkich produktow.' },
+        { title: 'Darmowa wysylka', desc: 'Profesjonalna dostawa w calej Europie.' },
+        { title: 'Fachowy montaz', desc: 'Wyspecjalizowany zespol techniczny.' },
+        { title: 'Obsluga indywidualna', desc: 'Fachowe doradztwo przy wyborze.' },
       ]
     },
   };
 
   const t = texts[locale] || texts.es;
-  const icons = [Shield, Truck, Wrench, HeadphonesIcon];
 
   return (
-    <section className="py-24 bg-[#fafaf9]">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-light text-neutral-900 text-center mb-16">
-          {t.title}
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.features.map((feature, index) => {
-            const Icon = icons[index];
-            return (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 mb-5 bg-white rounded-full border border-neutral-100">
-                  <Icon className="w-5 h-5 text-neutral-600" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm font-medium text-neutral-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-neutral-500">{feature.desc}</p>
-              </div>
-            );
-          })}
+    <section className="py-16 border-t border-border">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {t.features.map((feature, index) => (
+            <div key={index}>
+              <div className="w-8 h-px bg-accent mb-5" />
+              <h3 className="text-[11px] uppercase tracking-[0.2em] font-medium text-foreground mb-2">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

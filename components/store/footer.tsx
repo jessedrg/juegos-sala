@@ -8,51 +8,51 @@ interface FooterProps {
 const CATEGORIES: Record<string, { slug: string; name: string }[]> = {
   es: [{ slug: 'mesas-billar', name: 'Billar' }, { slug: 'futbolines', name: 'Futbolines' }, { slug: 'dardos', name: 'Dardos' }, { slug: 'air-hockey', name: 'Air Hockey' }],
   en: [{ slug: 'pool-tables', name: 'Pool Tables' }, { slug: 'foosball-tables', name: 'Foosball' }, { slug: 'dart-boards', name: 'Darts' }, { slug: 'air-hockey', name: 'Air Hockey' }],
-  de: [{ slug: 'billardtische', name: 'Billard' }, { slug: 'tischfussball', name: 'Tischfußball' }, { slug: 'dartscheiben', name: 'Darts' }, { slug: 'airhockey', name: 'Airhockey' }],
-  fr: [{ slug: 'tables-billard', name: 'Billard' }, { slug: 'baby-foot', name: 'Baby-foot' }, { slug: 'cibles-flechettes', name: 'Fléchettes' }, { slug: 'air-hockey', name: 'Air Hockey' }],
+  de: [{ slug: 'billardtische', name: 'Billard' }, { slug: 'tischfussball', name: 'Tischfussball' }, { slug: 'dartscheiben', name: 'Darts' }, { slug: 'airhockey', name: 'Airhockey' }],
+  fr: [{ slug: 'tables-billard', name: 'Billard' }, { slug: 'baby-foot', name: 'Baby-foot' }, { slug: 'cibles-flechettes', name: 'Flechettes' }, { slug: 'air-hockey', name: 'Air Hockey' }],
   it: [{ slug: 'tavoli-biliardo', name: 'Biliardo' }, { slug: 'calcio-balilla', name: 'Calcio Balilla' }, { slug: 'bersagli-freccette', name: 'Freccette' }, { slug: 'air-hockey', name: 'Air Hockey' }],
   pt: [{ slug: 'mesas-bilhar', name: 'Bilhar' }, { slug: 'matraquilhos', name: 'Matraquilhos' }, { slug: 'alvos-dardos', name: 'Dardos' }, { slug: 'air-hockey', name: 'Air Hockey' }],
   nl: [{ slug: 'pooltafels', name: 'Pool' }, { slug: 'tafelvoetbal', name: 'Tafelvoetbal' }, { slug: 'dartborden', name: 'Darts' }, { slug: 'airhockey', name: 'Airhockey' }],
-  pl: [{ slug: 'stoly-bilardowe', name: 'Bilard' }, { slug: 'pilkarzyki', name: 'Piłkarzyki' }, { slug: 'tarcze-darta', name: 'Dart' }, { slug: 'air-hockey', name: 'Air Hockey' }],
+  pl: [{ slug: 'stoly-bilardowe', name: 'Bilard' }, { slug: 'pilkarzyki', name: 'Pilkarzyki' }, { slug: 'tarcze-darta', name: 'Dart' }, { slug: 'air-hockey', name: 'Air Hockey' }],
 };
 
 export function Footer({ locale }: FooterProps) {
-  const texts: Record<string, { desc: string; products: string; company: string; legal: string; privacy: string; terms: string; about: string; contact: string; faq: string }> = {
-    es: { desc: 'Mesas de billar, futbolines y juegos de sala de alta calidad.', products: 'Productos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidad', terms: 'Términos', about: 'Nosotros', contact: 'Contacto', faq: 'FAQ' },
-    en: { desc: 'High quality pool tables, foosball and game room equipment.', products: 'Products', company: 'Company', legal: 'Legal', privacy: 'Privacy', terms: 'Terms', about: 'About', contact: 'Contact', faq: 'FAQ' },
-    de: { desc: 'Hochwertige Billardtische, Tischfußball und Spielzimmerausstattung.', products: 'Produkte', company: 'Unternehmen', legal: 'Impressum', privacy: 'Datenschutz', terms: 'AGB', about: 'Über uns', contact: 'Kontakt', faq: 'FAQ' },
-    fr: { desc: 'Tables de billard, baby-foot et équipements de salle de jeux de haute qualité.', products: 'Produits', company: 'Entreprise', legal: 'Mentions légales', privacy: 'Confidentialité', terms: 'CGV', about: 'À propos', contact: 'Contact', faq: 'FAQ' },
-    it: { desc: 'Tavoli da biliardo, calcio balilla e attrezzature per sala giochi di alta qualità.', products: 'Prodotti', company: 'Azienda', legal: 'Note legali', privacy: 'Privacy', terms: 'Termini', about: 'Chi siamo', contact: 'Contatto', faq: 'FAQ' },
-    pt: { desc: 'Mesas de bilhar, matraquilhos e equipamentos de sala de jogos de alta qualidade.', products: 'Produtos', company: 'Empresa', legal: 'Legal', privacy: 'Privacidade', terms: 'Termos', about: 'Sobre', contact: 'Contato', faq: 'FAQ' },
-    nl: { desc: 'Hoogwaardige pooltafels, tafelvoetbal en speelkameruitrusting.', products: 'Producten', company: 'Bedrijf', legal: 'Juridisch', privacy: 'Privacy', terms: 'Voorwaarden', about: 'Over ons', contact: 'Contact', faq: 'FAQ' },
-    pl: { desc: 'Wysokiej jakości stoły bilardowe, piłkarzyki i wyposażenie pokoju gier.', products: 'Produkty', company: 'Firma', legal: 'Nota prawna', privacy: 'Prywatność', terms: 'Regulamin', about: 'O nas', contact: 'Kontakt', faq: 'FAQ' },
+  const texts: Record<string, { desc: string; products: string; company: string; privacy: string; terms: string; about: string; contact: string; faq: string; legal: string }> = {
+    es: { desc: 'Mesas de billar, futbolines y juegos de sala de alta calidad para hogares exigentes.', products: 'Productos', company: 'Empresa', privacy: 'Privacidad', terms: 'Terminos', about: 'Nosotros', contact: 'Contacto', faq: 'FAQ', legal: 'Legal' },
+    en: { desc: 'High quality pool tables, foosball and game room equipment for discerning homes.', products: 'Products', company: 'Company', privacy: 'Privacy', terms: 'Terms', about: 'About', contact: 'Contact', faq: 'FAQ', legal: 'Legal' },
+    de: { desc: 'Hochwertige Billardtische, Tischfussball und Spielzimmerausstattung fur anspruchsvolle Hauser.', products: 'Produkte', company: 'Unternehmen', privacy: 'Datenschutz', terms: 'AGB', about: 'Uber uns', contact: 'Kontakt', faq: 'FAQ', legal: 'Impressum' },
+    fr: { desc: 'Tables de billard, baby-foot et equipements de salle de jeux de haute qualite.', products: 'Produits', company: 'Entreprise', privacy: 'Confidentialite', terms: 'CGV', about: 'A propos', contact: 'Contact', faq: 'FAQ', legal: 'Mentions legales' },
+    it: { desc: 'Tavoli da biliardo, calcio balilla e attrezzature per sala giochi di alta qualita.', products: 'Prodotti', company: 'Azienda', privacy: 'Privacy', terms: 'Termini', about: 'Chi siamo', contact: 'Contatto', faq: 'FAQ', legal: 'Note legali' },
+    pt: { desc: 'Mesas de bilhar, matraquilhos e equipamentos de sala de jogos de alta qualidade.', products: 'Produtos', company: 'Empresa', privacy: 'Privacidade', terms: 'Termos', about: 'Sobre', contact: 'Contato', faq: 'FAQ', legal: 'Legal' },
+    nl: { desc: 'Hoogwaardige pooltafels, tafelvoetbal en speelkameruitrusting.', products: 'Producten', company: 'Bedrijf', privacy: 'Privacy', terms: 'Voorwaarden', about: 'Over ons', contact: 'Contact', faq: 'FAQ', legal: 'Juridisch' },
+    pl: { desc: 'Wysokiej jakosci stoly bilardowe, pilkarzyki i wyposazenie pokoju gier.', products: 'Produkty', company: 'Firma', privacy: 'Prywatnosc', terms: 'Regulamin', about: 'O nas', contact: 'Kontakt', faq: 'FAQ', legal: 'Nota prawna' },
   };
   const t = texts[locale] || texts.es;
   const cats = CATEGORIES[locale] || CATEGORIES.es;
 
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-100">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-foreground text-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand */}
-          <div className="md:col-span-2">
-            <Link href={`/${locale === 'en' ? '' : locale}`} className="text-lg font-light text-neutral-900">
-              Game Room
+          <div className="md:col-span-5">
+            <Link href={`/${locale === 'en' ? '' : locale}`} className="font-serif text-xl text-background">
+              The Games Room
             </Link>
-            <p className="text-sm text-neutral-500 mt-4 max-w-xs leading-relaxed">
+            <p className="text-sm text-background/40 mt-6 max-w-xs leading-relaxed">
               {t.desc}
             </p>
           </div>
 
           {/* Products */}
-          <div>
-            <h4 className="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-4">{t.products}</h4>
-            <ul className="space-y-3">
+          <div className="md:col-span-3">
+            <h4 className="text-[10px] uppercase tracking-[0.25em] text-background/40 mb-5">{t.products}</h4>
+            <ul className="flex flex-col gap-3">
               {cats.map((cat) => (
                 <li key={cat.slug}>
                   <Link 
                     href={`/${locale === 'en' ? '' : locale + '/'}${cat.slug}`}
-                    className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-sm text-background/60 hover:text-background transition-colors"
                   >
                     {cat.name}
                   </Link>
@@ -62,32 +62,30 @@ export function Footer({ locale }: FooterProps) {
           </div>
 
           {/* Company */}
-          <div>
-            <h4 className="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-4">{t.company}</h4>
-            <ul className="space-y-3">
-              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}about`} className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">{t.about}</Link></li>
-              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}contacto`} className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">{t.contact}</Link></li>
-              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}faq`} className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">{t.faq}</Link></li>
+          <div className="md:col-span-2">
+            <h4 className="text-[10px] uppercase tracking-[0.25em] text-background/40 mb-5">{t.company}</h4>
+            <ul className="flex flex-col gap-3">
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}about`} className="text-sm text-background/60 hover:text-background transition-colors">{t.about}</Link></li>
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}contact`} className="text-sm text-background/60 hover:text-background transition-colors">{t.contact}</Link></li>
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}faq`} className="text-sm text-background/60 hover:text-background transition-colors">{t.faq}</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div className="md:col-span-2">
+            <h4 className="text-[10px] uppercase tracking-[0.25em] text-background/40 mb-5">{t.legal}</h4>
+            <ul className="flex flex-col gap-3">
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}privacidad`} className="text-sm text-background/60 hover:text-background transition-colors">{t.privacy}</Link></li>
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}terminos`} className="text-sm text-background/60 hover:text-background transition-colors">{t.terms}</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-neutral-400">
-            © {new Date().getFullYear()} Game Room
+        <div className="mt-20 pt-8 border-t border-background/10">
+          <p className="text-[11px] text-background/30 tracking-wider">
+            {'Copyright'} {new Date().getFullYear()} The Games Room. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link href={`/${locale === 'en' ? '' : locale + '/'}privacidad`} className="text-xs text-neutral-400 hover:text-neutral-600 transition-colors">
-              {t.privacy}
-            </Link>
-            <Link href={`/${locale === 'en' ? '' : locale + '/'}terminos`} className="text-xs text-neutral-400 hover:text-neutral-600 transition-colors">
-              {t.terms}
-            </Link>
-            <Link href={`/${locale === 'en' ? '' : locale + '/'}legal`} className="text-xs text-neutral-400 hover:text-neutral-600 transition-colors">
-              {t.legal}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
