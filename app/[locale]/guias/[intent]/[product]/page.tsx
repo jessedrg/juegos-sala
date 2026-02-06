@@ -12,7 +12,6 @@ interface PageProps {
   params: Promise<{ locale: string; intent: string; product: string }>;
 }
 
-// Intent types we want to rank for
 const VALID_INTENTS = ['mejor', 'best', 'guia', 'guide', 'comparar', 'compare', 'precios', 'prices', 'profesional', 'professional', 'barato', 'cheap', 'comprar', 'buy', 'kaufen', 'acheter', 'opiniones', 'reviews'] as const;
 
 const INTENT_HEADINGS: Record<string, Record<string, { h1: string; subtitle: string }>> = {
@@ -44,7 +43,6 @@ const INTENT_HEADINGS: Record<string, Record<string, { h1: string; subtitle: str
   },
 };
 
-// Price data
 const PRICE_DATA: Record<string, { min: number; max: number; popular: number }> = {
   'mesas-billar': { min: 800, max: 5000, popular: 1800 },
   'futbolines': { min: 300, max: 2500, popular: 800 },
@@ -54,7 +52,6 @@ const PRICE_DATA: Record<string, { min: number; max: number; popular: number }> 
   'accesorios-juegos': { min: 10, max: 300, popular: 50 },
 };
 
-// Product tiers for comparison tables
 const PRODUCT_TIERS: Record<string, Record<string, { name: string; price: string; features: string[] }[]>> = {
   'mesas-billar': {
     es: [
@@ -144,7 +141,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: (titles[validLocale] || titles.es).slice(0, 60),
     description: (descs[validLocale] || descs.es).slice(0, 160),
-    alternates: { canonical: `${siteUrl}/${locale}/${intent}/${product}` },
+    alternates: { canonical: `${siteUrl}/${locale}/guias/${intent}/${product}` },
     openGraph: { title: titles[validLocale] || titles.es, description: descs[validLocale] || descs.es, type: 'website', siteName: 'The Games Room' },
     robots: { index: true, follow: true },
   };
@@ -174,15 +171,12 @@ export default async function IntentProductPage({ params }: PageProps) {
     quote: isEs ? 'Solicitar Presupuesto' : 'Request Quote',
     catalog: isEs ? 'Ver Catalogo' : 'View Catalog',
     compare: isEs ? 'Comparativa de precios' : 'Price comparison',
-    features: isEs ? 'Caracteristicas' : 'Features',
-    range: isEs ? 'Rango de precio' : 'Price range',
     tier: isEs ? 'Gama' : 'Tier',
     buyIn: isEs ? 'Comprar en' : 'Buy in',
     otherGuides: isEs ? 'Otras guias' : 'Other guides',
     faq: isEs ? 'Preguntas frecuentes' : 'FAQ',
   };
 
-  // FAQs tailored to intent
   const faqItems = isEs ? [
     { q: `Cual es ${intent === 'mejor' ? 'la mejor' : 'la mas recomendada'} ${catName.toLowerCase()}?`, a: `Depende de tu uso. Para hogar, recomendamos modelos de gama media (desde ${prices.popular}EUR). Para uso profesional, las gamas premium (desde ${Math.round(prices.max * 0.6)}EUR) ofrecen mejor rendimiento y durabilidad.` },
     { q: `Cuanto cuesta ${catName.toLowerCase()} de calidad?`, a: `Un buen modelo de ${catName.toLowerCase()} cuesta entre ${prices.min}EUR y ${prices.max}EUR. El rango mas vendido esta entre ${prices.popular}EUR y ${Math.round(prices.popular * 1.5)}EUR, ofreciendo excelente relacion calidad-precio.` },
@@ -301,7 +295,7 @@ export default async function IntentProductPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* City links - massive internal linking */}
+        {/* City links */}
         <section className="py-16 bg-secondary">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <h2 className="text-xl font-serif font-light text-foreground mb-8">{txt.buyIn}</h2>
@@ -323,7 +317,7 @@ export default async function IntentProductPage({ params }: PageProps) {
               {otherProducts.map((cat) => {
                 const name = CATEGORY_TRANSLATIONS[validLocale]?.[cat as keyof typeof CATEGORY_TRANSLATIONS[typeof validLocale]] || cat;
                 return (
-                  <Link key={cat} href={`/${locale}/${intent}/${cat}`} className="p-4 bg-secondary hover:bg-muted transition-colors text-center">
+                  <Link key={cat} href={`/${locale}/guias/${intent}/${cat}`} className="p-4 bg-secondary hover:bg-muted transition-colors text-center">
                     <p className="font-medium text-sm text-foreground capitalize">{name}</p>
                   </Link>
                 );

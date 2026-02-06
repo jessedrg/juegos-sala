@@ -82,7 +82,7 @@ export async function GET(_request: Request, { params }: RouteParams) {
     }
   }
 
-  // 6. NEW: /[intent]/[product] guide pages
+  // 6. NEW: /guias/[intent]/[product] guide pages
   const intentSlugs: Record<string, string[]> = {
     es: ['mejor', 'guia', 'comparar', 'precios', 'profesional', 'barato', 'comprar', 'opiniones'],
     en: ['best', 'guide', 'compare', 'prices', 'professional', 'cheap', 'buy', 'reviews'],
@@ -92,7 +92,7 @@ export async function GET(_request: Request, { params }: RouteParams) {
   const localeIntents = intentSlugs[cleanLocale] || [];
   for (const intentSlug of localeIntents) {
     for (const cat of CATEGORIES) {
-      urls.push(`${prefix}/${intentSlug}/${cat}`);
+      urls.push(`${prefix}/guias/${intentSlug}/${cat}`);
     }
   }
 
