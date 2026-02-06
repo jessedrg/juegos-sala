@@ -4,56 +4,56 @@
 @custom-variant dark (&:is(.dark *));
 
 /* =============================================================================
-   CBD BOUTIQUE - LUXURY MINIMALIST DESIGN SYSTEM
-   Inspired by: Aesop, Le Labo, Byredo, architectural aesthetics
+   THE GAMES ROOM - PREMIUM GAME ROOM DESIGN SYSTEM
+   Mesas de billar, futbolines, dardos y air hockey
    ============================================================================= */
 
 :root {
-  /* Warm off-white backgrounds - like gallery walls */
-  --background: oklch(0.985 0.005 85);
-  --foreground: oklch(0.12 0.01 60);
+  /* Warm off-white backgrounds */
+  --background: oklch(0.985 0.003 75);
+  --foreground: oklch(0.13 0.02 50);
   
-  /* Cards with subtle warmth */
+  /* Cards */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.12 0.01 60);
+  --card-foreground: oklch(0.13 0.02 50);
   
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.12 0.01 60);
+  --popover-foreground: oklch(0.13 0.02 50);
   
-  /* Primary - deep charcoal, almost black */
-  --primary: oklch(0.12 0.01 60);
-  --primary-foreground: oklch(0.985 0.005 85);
+  /* Primary - rich dark */
+  --primary: oklch(0.15 0.01 50);
+  --primary-foreground: oklch(0.98 0.003 75);
   
-  /* Secondary - warm stone gray */
-  --secondary: oklch(0.95 0.008 80);
-  --secondary-foreground: oklch(0.12 0.01 60);
+  /* Secondary - warm stone */
+  --secondary: oklch(0.95 0.005 70);
+  --secondary-foreground: oklch(0.15 0.01 50);
   
-  /* Muted - soft warm gray */
-  --muted: oklch(0.92 0.008 80);
-  --muted-foreground: oklch(0.45 0.02 60);
+  /* Muted */
+  --muted: oklch(0.93 0.005 70);
+  --muted-foreground: oklch(0.45 0.02 50);
   
-  /* Accent - sage green (CBD/botanical) */
-  --accent: oklch(0.55 0.08 145);
-  --accent-foreground: oklch(1 0 0);
+  /* Accent - warm amber/gold for game room feel */
+  --accent: oklch(0.65 0.14 65);
+  --accent-foreground: oklch(0.15 0.01 50);
   
   /* Destructive */
   --destructive: oklch(0.55 0.18 25);
   --destructive-foreground: oklch(1 0 0);
   
-  /* Borders - barely visible, elegant */
-  --border: oklch(0.92 0.005 80);
-  --input: oklch(0.92 0.005 80);
-  --ring: oklch(0.55 0.08 145);
+  /* Borders */
+  --border: oklch(0.91 0.005 70);
+  --input: oklch(0.91 0.005 70);
+  --ring: oklch(0.65 0.14 65);
   
   /* Charts */
-  --chart-1: oklch(0.55 0.08 145);
-  --chart-2: oklch(0.60 0.06 180);
+  --chart-1: oklch(0.65 0.14 65);
+  --chart-2: oklch(0.55 0.08 145);
   --chart-3: oklch(0.50 0.10 100);
-  --chart-4: oklch(0.65 0.04 60);
+  --chart-4: oklch(0.60 0.06 180);
   --chart-5: oklch(0.45 0.08 30);
   
-  /* Minimal radius - architectural feel */
-  --radius: 0.125rem;
+  /* Slightly rounded - modern but grounded */
+  --radius: 0.5rem;
   
   /* Sidebar */
   --sidebar: oklch(0.985 0.005 85);
@@ -107,7 +107,7 @@
 
 @theme inline {
   --font-sans: 'Inter', 'Inter Fallback', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', 'Playfair Display Fallback', Georgia, serif;
+  --font-serif: 'DM Serif Display', 'DM Serif Display Fallback', Georgia, serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);

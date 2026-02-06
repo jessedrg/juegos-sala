@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!product) {
     return {
-      title: "Product Not Found | SaunaSpa.io",
+      title: "Product Not Found | The Games Room",
     };
   }
 

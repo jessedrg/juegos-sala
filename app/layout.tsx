@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter, Cormorant_Garamond } from 'next/font/google'
+import { Inter, DM_Serif_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -10,9 +10,9 @@ const inter = Inter({
   display: 'swap'
 });
 
-const cormorant = Cormorant_Garamond({ 
+const dmSerif = DM_Serif_Display({ 
   subsets: ["latin"], 
-  weight: ["300", "400", "500", "600"],
+  weight: ["400"],
   variable: '--font-serif',
   display: 'swap'
 });
@@ -22,14 +22,14 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://thegamesroom.io';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Game Room | Mesas de Billar, Futbolines y Dardos',
-    template: '%s | Game Room',
+    default: 'The Games Room | Mesas de Billar, Futbolines, Dardos y Air Hockey',
+    template: '%s | The Games Room',
   },
-  description: 'Mesas de billar, futbolines, dianas de dardos y air hockey para tu hogar. Garantía 2 años. Presupuesto sin compromiso.',
-  keywords: ['mesa billar', 'futbolin', 'dardos', 'air hockey', 'mesa billar precio', 'futbolin profesional', 'diana electronica', 'juegos sala'],
-  authors: [{ name: 'Game Room' }],
-  creator: 'Game Room',
-  publisher: 'Game Room',
+  description: 'Tienda especializada en mesas de billar, futbolines profesionales, dianas de dardos y mesas de air hockey para tu hogar. Envio gratis, garantia 2 anos y presupuesto sin compromiso en toda Europa.',
+  keywords: ['mesa billar', 'futbolin', 'dardos', 'air hockey', 'mesa billar precio', 'futbolin profesional', 'diana electronica', 'juegos sala', 'mesa billar casa', 'futbolin comprar', 'mesa air hockey', 'juegos de salon'],
+  authors: [{ name: 'The Games Room' }],
+  creator: 'The Games Room',
+  publisher: 'The Games Room',
   formatDetection: {
     email: false,
     address: false,
@@ -49,22 +49,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     url: SITE_URL,
-    siteName: 'Game Room',
-    title: 'Game Room | Mesas de Billar, Futbolines y Dardos',
-    description: 'Mesas de billar, futbolines, dianas de dardos y air hockey para tu hogar. Garantía 2 años.',
+    siteName: 'The Games Room',
+    title: 'The Games Room | Mesas de Billar, Futbolines, Dardos y Air Hockey',
+    description: 'Tienda especializada en mesas de billar, futbolines profesionales, dianas de dardos y mesas de air hockey. Envio gratis y garantia 2 anos.',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1647633391986-4614f2ee0ca4?w=1200&h=630&fit=crop&q=80',
         width: 1200,
         height: 630,
-        alt: 'The Games Room - Mesas de Billar y Juegos para Casa',
+        alt: 'The Games Room - Mesas de Billar, Futbolines y Juegos para Casa',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Game Room | Mesas de Billar, Futbolines y Dardos',
-    description: 'Mesas de billar, futbolines y dardos para tu hogar.',
+    title: 'The Games Room | Mesas de Billar, Futbolines y Dardos',
+    description: 'Mesas de billar, futbolines profesionales y dardos para tu hogar. Envio gratis.',
     images: ['https://images.unsplash.com/photo-1647633391986-4614f2ee0ca4?w=1200&h=630&fit=crop&q=80'],
     creator: '@thegamesroomio',
   },
@@ -79,14 +79,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    // Add your verification codes here
-    // google: 'your-google-verification-code',
-  },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#f5f4f0',
+  themeColor: '#1a1a1a',
   width: 'device-width',
   initialScale: 1,
 }
@@ -100,7 +96,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${dmSerif.variable} font-sans antialiased`}>
         {children}
         <IntercomProvider />
         <Analytics />
