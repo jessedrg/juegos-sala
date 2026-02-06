@@ -47,7 +47,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, categoria, ciudad } = await params
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://saunasyspas.com"
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thegamesroom.io"
 
   const category = getCategoryBySlug(categoria)
   const city = getCityBySlug(ciudad)
@@ -112,7 +112,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: '¿Por qué elegirnos?',
       deliveryTo: 'Envío a',
       deliveryDesc: 'Entrega e instalación profesional incluida',
-      warrantyTitle: 'Garantía 5 Años',
+      warrantyTitle: 'Garantia 2 Anos',
       warrantyDesc: 'Garantía completa en todos nuestros productos',
       fastInstall: 'Instalación Rápida',
       fastInstallDesc: 'Equipo de instaladores profesionales',
@@ -140,7 +140,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: 'Why choose us?',
       deliveryTo: 'Delivery to',
       deliveryDesc: 'Professional delivery and installation included',
-      warrantyTitle: '5 Year Warranty',
+      warrantyTitle: '2 Year Warranty',
       warrantyDesc: 'Full warranty on all products',
       fastInstall: 'Fast Installation',
       fastInstallDesc: 'Professional installation team',
@@ -168,7 +168,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: 'Warum uns wählen?',
       deliveryTo: 'Lieferung nach',
       deliveryDesc: 'Professionelle Lieferung und Installation inklusive',
-      warrantyTitle: '5 Jahre Garantie',
+      warrantyTitle: '2 Jahre Garantie',
       warrantyDesc: 'Volle Garantie auf alle Produkte',
       fastInstall: 'Schnelle Installation',
       fastInstallDesc: 'Professionelles Installationsteam',
@@ -196,7 +196,7 @@ export default async function CityProductPage({ params }: PageProps) {
       whyChooseUs: 'Pourquoi nous choisir?',
       deliveryTo: 'Livraison à',
       deliveryDesc: 'Livraison et installation professionnelles incluses',
-      warrantyTitle: 'Garantie 5 Ans',
+      warrantyTitle: 'Garantie 2 Ans',
       warrantyDesc: 'Garantie complète sur tous les produits',
       fastInstall: 'Installation Rapide',
       fastInstallDesc: 'Équipe d\'installation professionnelle',
@@ -296,7 +296,7 @@ export default async function CityProductPage({ params }: PageProps) {
                 <p className="text-sm text-muted-foreground">{texts.rating}</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-serif font-light mb-2">5 {texts.years}</p>
+                <p className="text-3xl font-serif font-light mb-2">2 {texts.years}</p>
                 <p className="text-sm text-muted-foreground">{texts.warranty}</p>
               </div>
             </div>

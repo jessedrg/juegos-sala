@@ -52,14 +52,14 @@ export function Categories({ locale }: CategoriesProps) {
   const t = texts[locale] || texts.es;
 
   return (
-    <section id="collections" className="py-24 bg-white">
+    <section id="collections" className="py-24 bg-card">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-light text-foreground mb-4">
             {t.title}
           </h2>
-          <p className="text-neutral-500">
+          <p className="text-muted-foreground">
             {t.subtitle}
           </p>
         </div>
@@ -73,7 +73,7 @@ export function Categories({ locale }: CategoriesProps) {
               className="group"
             >
               {/* Image */}
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100 mb-4">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-muted mb-4">
                 <Image
                   src={cat.image}
                   alt={cat.names[locale as keyof typeof cat.names] || cat.names.es}
@@ -84,22 +84,22 @@ export function Categories({ locale }: CategoriesProps) {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                 {/* Arrow */}
-                <div className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <ArrowUpRight className="w-4 h-4 text-neutral-900" />
+                <div className="absolute top-4 right-4 w-10 h-10 bg-card rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <ArrowUpRight className="w-4 h-4 text-foreground" />
                 </div>
               </div>
               
               {/* Content */}
               <div className="space-y-1">
-                <h3 className="text-lg font-medium text-neutral-900 group-hover:text-neutral-600 transition-colors">
+                <h3 className="text-lg font-medium text-foreground group-hover:text-muted-foreground transition-colors">
                   {cat.names[locale as keyof typeof cat.names] || cat.names.es}
                 </h3>
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-muted-foreground">
                   {cat.desc[locale as keyof typeof cat.desc] || cat.desc.es}
                 </p>
-                <p className="text-sm text-neutral-500 pt-2">
-                  <span className="text-neutral-400">{t.from}</span>{' '}
-                  <span className="font-medium text-neutral-900">{cat.price}</span>
+                <p className="text-sm text-muted-foreground pt-2">
+                  <span className="text-muted-foreground">{t.from}</span>{' '}
+                  <span className="font-medium text-foreground">{cat.price}</span>
                 </p>
               </div>
             </Link>

@@ -85,9 +85,9 @@ export function Features({ locale }: FeaturesProps) {
   const icons = [Shield, Truck, Wrench, HeadphonesIcon];
 
   return (
-    <section className="py-24 bg-[#fafaf9]">
+    <section className="py-24 bg-secondary">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-light text-neutral-900 text-center mb-16">
+        <h2 className="text-2xl md:text-3xl font-serif font-light text-foreground text-center mb-16">
           {t.title}
         </h2>
         
@@ -96,11 +96,11 @@ export function Features({ locale }: FeaturesProps) {
             const Icon = icons[index];
             return (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 mb-5 bg-white rounded-full border border-neutral-100">
-                  <Icon className="w-5 h-5 text-neutral-600" strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 mb-5 bg-card rounded-full border border-border">
+                  <Icon className="w-5 h-5 text-muted-foreground" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-sm font-medium text-neutral-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-neutral-500">{feature.desc}</p>
+                <h3 className="text-sm font-medium text-foreground mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground">{feature.desc}</p>
               </div>
             );
           })}

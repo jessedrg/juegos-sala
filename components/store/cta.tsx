@@ -23,25 +23,25 @@ export function CTA({ locale }: CTAProps) {
   const t = texts[locale] || texts.es;
 
   return (
-    <section className="py-24 bg-neutral-900">
+    <section className="py-24 bg-primary">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
+        <h2 className="text-3xl md:text-4xl font-serif font-light text-primary-foreground mb-4">
           {t.title}
         </h2>
-        <p className="text-neutral-400 mb-10 max-w-md mx-auto">
+        <p className="text-primary-foreground/60 mb-10 max-w-md mx-auto">
           {t.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button 
             onClick={() => openIntercomChat()}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-neutral-900 text-sm rounded-full hover:bg-neutral-100 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-card text-foreground text-sm rounded-full hover:bg-secondary transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
             {t.cta}
           </button>
           <Link 
             href={`/${locale === 'en' ? '' : locale + '/'}mesas-billar`}
-            className="inline-flex items-center gap-2 px-8 py-4 border border-neutral-700 text-white text-sm rounded-full hover:bg-neutral-800 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/30 text-primary-foreground text-sm rounded-full hover:bg-primary-foreground/10 transition-colors"
           >
             {t.catalog}
             <ArrowRight className="w-4 h-4" />

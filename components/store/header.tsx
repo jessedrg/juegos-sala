@@ -40,7 +40,7 @@ export function Header({ locale, transparent = false }: HeaderProps) {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         transparent 
           ? "bg-transparent" 
-          : "bg-white/80 backdrop-blur-md border-b border-neutral-100"
+          : "bg-card/80 backdrop-blur-md border-b border-border"
       )}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex h-14 items-center justify-between">
@@ -49,10 +49,10 @@ export function Header({ locale, transparent = false }: HeaderProps) {
               href={`/${locale === 'en' ? '' : locale}`} 
               className={cn(
                 "text-lg font-light tracking-wide transition-colors",
-                transparent ? "text-white" : "text-neutral-900"
+                transparent ? "text-primary-foreground" : "text-foreground"
               )}
             >
-              Game Room
+              The Games Room
             </Link>
 
             {/* Desktop Nav */}
@@ -64,8 +64,8 @@ export function Header({ locale, transparent = false }: HeaderProps) {
                   className={cn(
                     "text-sm transition-colors",
                     transparent 
-                      ? "text-white/70 hover:text-white" 
-                      : "text-neutral-500 hover:text-neutral-900"
+                      ? "text-primary-foreground/70 hover:text-primary-foreground" 
+                      : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {getCatName(cat)}
@@ -80,8 +80,8 @@ export function Header({ locale, transparent = false }: HeaderProps) {
                 className={cn(
                   "hidden sm:flex items-center gap-2 text-sm px-4 py-2 rounded-full transition-all",
                   transparent 
-                    ? "bg-white/10 text-white hover:bg-white/20" 
-                    : "bg-neutral-900 text-white hover:bg-neutral-800"
+                    ? "bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20" 
+                    : "bg-primary text-primary-foreground hover:bg-primary/90"
                 )}
               >
                 <MessageCircle className="w-3.5 h-3.5" />
@@ -93,7 +93,7 @@ export function Header({ locale, transparent = false }: HeaderProps) {
                 onClick={() => setIsMenuOpen(true)}
                 className={cn(
                   "md:hidden p-2 -mr-2",
-                  transparent ? "text-white" : "text-neutral-900"
+                  transparent ? "text-primary-foreground" : "text-foreground"
                 )}
               >
                 <Menu className="w-5 h-5" />
@@ -119,10 +119,10 @@ export function Header({ locale, transparent = false }: HeaderProps) {
         
         {/* Panel */}
         <div className={cn(
-          "absolute right-0 top-0 bottom-0 w-full max-w-sm bg-white transition-transform duration-300",
+          "absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card transition-transform duration-300",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
-          <div className="flex items-center justify-between p-6 border-b border-neutral-100">
+          <div className="flex items-center justify-between p-6 border-b border-border">
             <span className="text-lg font-light">Menu</span>
             <button onClick={() => setIsMenuOpen(false)} className="p-2 -mr-2">
               <X className="w-5 h-5" />
@@ -135,15 +135,15 @@ export function Header({ locale, transparent = false }: HeaderProps) {
                 key={cat.slug}
                 href={`/${locale === 'en' ? '' : locale + '/'}${cat.slug}`}
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-3 text-lg text-neutral-600 hover:text-neutral-900 transition-colors"
+                className="block py-3 text-lg text-muted-foreground hover:text-foreground transition-colors"
               >
                 {getCatName(cat)}
               </Link>
             ))}
-            <div className="pt-6 mt-6 border-t border-neutral-100">
+            <div className="pt-6 mt-6 border-t border-border">
               <button 
                 onClick={() => { openIntercomChat(); setIsMenuOpen(false); }}
-                className="flex items-center justify-center gap-2 w-full py-3 bg-neutral-900 text-white rounded-full"
+                className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-primary-foreground rounded-full"
               >
                 <MessageCircle className="w-4 h-4" />
                 {t.quote}

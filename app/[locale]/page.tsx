@@ -6,6 +6,8 @@ import { Features } from "@/components/store/features";
 import { Categories } from "@/components/store/categories";
 import { ShopifyProducts } from "@/components/store/shopify-products"; // Updated import
 import { CTA } from "@/components/store/cta";
+import { Testimonials } from "@/components/store/testimonials";
+import { BuyingGuide } from "@/components/store/buying-guide";
 import { LocalSEO } from "@/components/store/local-seo";
 import { Footer } from "@/components/store/footer";
 import { SUPPORTED_LOCALES, TRANSLATIONS, type Locale } from "@/lib/seo-data";
@@ -159,6 +161,8 @@ export default async function LocalePage({ params }: PageProps) {
         <Features locale={validLocale} />
         <Categories locale={validLocale} />
         <ShopifyProducts locale={validLocale} title={t.products.title} />
+        <Testimonials locale={validLocale} />
+        <BuyingGuide locale={validLocale} />
         <CTA locale={validLocale} />
         <LocalSEO locale={validLocale} />
         <Footer locale={validLocale} />

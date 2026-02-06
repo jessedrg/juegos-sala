@@ -121,8 +121,26 @@ export function LocalSEO({ locale }: LocalSEOProps) {
 
   const trustIcons = [Star, Truck, Shield, Award];
 
+  // FAQ JSON-LD for Google rich snippets
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": content.faq.items.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Trust Section */}
       <section className="py-16 bg-[#fafaf8]">
         <div className="max-w-6xl mx-auto px-6">

@@ -37,22 +37,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const imageUrl = product.images?.edges?.[0]?.node?.url;
 
   return {
-    title: `${translated.title} | SaunaSpa.io`,
-    description: translated.description?.slice(0, 160) || `Buy ${translated.title} at SaunaSpa.io`,
+    title: `${translated.title} | The Games Room`,
+    description: translated.description?.slice(0, 160) || `Buy ${translated.title} at The Games Room`,
     alternates: {
       canonical: `/${locale}/product/${handle}`,
     },
     openGraph: {
-      title: `${translated.title} | SaunaSpa.io`,
+      title: `${translated.title} | The Games Room`,
       description: translated.description?.slice(0, 160),
       url: `/${locale}/product/${handle}`,
-      siteName: "SaunaSpa.io",
+      siteName: "The Games Room",
       type: "website",
       images: imageUrl ? [{ url: imageUrl, width: 1200, height: 630, alt: translated.title }] : [],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${translated.title} | SaunaSpa.io`,
+      title: `${translated.title} | The Games Room`,
       description: translated.description?.slice(0, 160),
       images: imageUrl ? [imageUrl] : [],
     },
@@ -73,9 +73,6 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   // Translate product content if not English
-  console.log('[v0] Product page locale:', validLocale, 'English?:', validLocale === 'en');
-  console.log('[v0] Original product title:', product.title);
-  
   const translated = validLocale !== 'en' 
     ? await translateProduct(
         { 
@@ -88,9 +85,6 @@ export default async function ProductPage({ params }: PageProps) {
         'en'
       )
     : { title: product.title, description: product.description || '', productType: product.productType || '' };
-
-  console.log('[v0] Translated title:', translated.title);
-  console.log('[v0] Translated description:', translated.description?.substring(0, 50));
 
   // Create translated product object
   const translatedProduct = {

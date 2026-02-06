@@ -45,57 +45,57 @@ export function getAllCitySlugs(): string[] {
   return getAllCities().map(city => city.slug);
 }
 
-// Product categories with translations
+// Product categories with translations - Game Room products
 export const PRODUCT_CATEGORIES = [
   { 
-    slug: 'saunas-finlandesas', 
+    slug: 'mesas-billar', 
     translations: {
-      es: 'Saunas Finlandesas', en: 'Finnish Saunas', de: 'Finnische Saunas', 
-      fr: 'Saunas Finlandais', it: 'Saune Finlandesi', pt: 'Saunas Finlandesas',
-      nl: 'Finse Sauna\'s', pl: 'Sauny Fińskie', cs: 'Finské Sauny', el: 'Φινλανδικές Σάουνες'
+      es: 'Mesas de Billar', en: 'Pool Tables', de: 'Billardtische', 
+      fr: 'Tables de Billard', it: 'Tavoli da Biliardo', pt: 'Mesas de Bilhar',
+      nl: 'Pooltafels', pl: 'Stoly Bilardowe', cs: 'Kulecnikove Stoly', el: 'Trapezia Mpiliardou'
     },
-    keywords: ['sauna finlandesa', 'sauna casa', 'sauna madera', 'finnish sauna', 'home sauna'],
-    priceRange: '€2,500 - €12,000',
+    keywords: ['mesa billar', 'pool table', 'billar casa', 'mesa billar precio', 'billar profesional'],
+    priceRange: '800 - 5.000',
   },
   { 
-    slug: 'jacuzzis-exterior', 
+    slug: 'futbolines', 
     translations: {
-      es: 'Jacuzzis Exterior', en: 'Outdoor Hot Tubs', de: 'Außen-Whirlpools',
-      fr: 'Jacuzzis Extérieur', it: 'Vasche Esterne', pt: 'Jacuzzis Exterior',
-      nl: 'Buiten Jacuzzi\'s', pl: 'Jacuzzi Zewnętrzne', cs: 'Venkovní Vířivky', el: 'Εξωτερικά Τζακούζι'
+      es: 'Futbolines', en: 'Foosball Tables', de: 'Tischfussball',
+      fr: 'Baby-foot', it: 'Calcio Balilla', pt: 'Matraquilhos',
+      nl: 'Tafelvoetbal', pl: 'Pilkarzyki', cs: 'Stolni Fotbaly', el: 'Podosfairakia'
     },
-    keywords: ['jacuzzi exterior', 'hot tub', 'outdoor spa', 'garden jacuzzi'],
-    priceRange: '€3,000 - €15,000',
+    keywords: ['futbolin', 'foosball table', 'futbolin profesional', 'futbolin comprar'],
+    priceRange: '300 - 2.500',
   },
   { 
-    slug: 'baneras-hidromasaje', 
+    slug: 'dardos', 
     translations: {
-      es: 'Bañeras Hidromasaje', en: 'Whirlpool Baths', de: 'Whirlpool-Badewannen',
-      fr: 'Baignoires Balnéo', it: 'Vasche Idromassaggio', pt: 'Banheiras Hidromassagem',
-      nl: 'Whirlpool Baden', pl: 'Wanny Hydromasażowe', cs: 'Vířivé Vany', el: 'Μπανιέρες Υδρομασάζ'
+      es: 'Dianas y Dardos', en: 'Dart Boards', de: 'Dartscheiben',
+      fr: 'Cibles de Flechettes', it: 'Bersagli Freccette', pt: 'Alvos de Dardos',
+      nl: 'Dartborden', pl: 'Tarcze do Darta', cs: 'Sipkove Tarce', el: 'Stochoi Velakia'
     },
-    keywords: ['whirlpool bath', 'jacuzzi bath', 'massage tub'],
-    priceRange: '€1,500 - €8,000',
+    keywords: ['diana electronica', 'dart board', 'dardos profesionales', 'diana dardos'],
+    priceRange: '50 - 500',
   },
   { 
-    slug: 'cabinas-infrarrojos', 
+    slug: 'air-hockey', 
     translations: {
-      es: 'Cabinas Infrarrojos', en: 'Infrared Cabins', de: 'Infrarotkabinen',
-      fr: 'Cabines Infrarouges', it: 'Cabine Infrarossi', pt: 'Cabines Infravermelhos',
-      nl: 'Infrarood Cabines', pl: 'Kabiny Podczerwone', cs: 'Infrakabiny', el: 'Καμπίνες Υπερύθρων'
+      es: 'Mesas Air Hockey', en: 'Air Hockey Tables', de: 'Airhockey-Tische',
+      fr: 'Tables Air Hockey', it: 'Tavoli Air Hockey', pt: 'Mesas Air Hockey',
+      nl: 'Airhockey Tafels', pl: 'Stoly Air Hockey', cs: 'Stoly Air Hockey', el: 'Trapezia Air Hockey'
     },
-    keywords: ['infrared cabin', 'infrared sauna', 'therapy cabin'],
-    priceRange: '€1,200 - €5,000',
+    keywords: ['air hockey', 'mesa air hockey', 'air hockey table', 'air hockey casa'],
+    priceRange: '200 - 3.000',
   },
   { 
-    slug: 'spas-hinchables', 
+    slug: 'ping-pong', 
     translations: {
-      es: 'Spas Hinchables', en: 'Inflatable Spas', de: 'Aufblasbare Spas',
-      fr: 'Spas Gonflables', it: 'Spa Gonfiabili', pt: 'Spas Insufláveis',
-      nl: 'Opblaasbare Spa\'s', pl: 'Spa Dmuchane', cs: 'Nafukovací Spa', el: 'Φουσκωτά Σπα'
+      es: 'Mesas Ping Pong', en: 'Table Tennis', de: 'Tischtennisplatten',
+      fr: 'Tables de Ping Pong', it: 'Tavoli Ping Pong', pt: 'Mesas Ping Pong',
+      nl: 'Tafeltennistafels', pl: 'Stoly do Ping Ponga', cs: 'Stolni Tenis', el: 'Trapezia Ping Pong'
     },
-    keywords: ['inflatable spa', 'portable hot tub', 'blow up jacuzzi'],
-    priceRange: '€400 - €1,500',
+    keywords: ['mesa ping pong', 'table tennis', 'ping pong plegable', 'mesa tenis mesa'],
+    priceRange: '150 - 2.000',
   },
 ] as const;
 
@@ -112,44 +112,44 @@ export function generateCityDescription(city: CityData, category: ProductCategor
   
   const templates: Record<Locale, string[]> = {
     es: [
-      `¿Buscas ${catName.toLowerCase()} en ${city.name}? Especialistas en instalación. Presupuesto sin compromiso.`,
-      `${catName} en ${city.name} al mejor precio. Instalación profesional, garantía 5 años.`,
+      `Comprar ${catName.toLowerCase()} en ${city.name}. Envio gratis y garantia 2 anos. Presupuesto sin compromiso.`,
+      `${catName} en ${city.name} al mejor precio. Entrega gratuita, garantia 2 anos.`,
     ],
     en: [
-      `Looking for ${catName.toLowerCase()} in ${city.name}? Installation specialists. Free quote.`,
-      `${catName} in ${city.name} at the best price. Professional installation, 5 year warranty.`,
+      `Buy ${catName.toLowerCase()} in ${city.name}. Free shipping and 2-year warranty. Free quote.`,
+      `${catName} in ${city.name} at the best price. Free delivery, 2 year warranty.`,
     ],
     de: [
-      `${catName} in ${city.name} gesucht? Installationsspezialisten. Kostenloses Angebot.`,
-      `${catName} in ${city.name} zum besten Preis. Professionelle Installation, 5 Jahre Garantie.`,
+      `${catName} in ${city.name} kaufen. Kostenloser Versand und 2 Jahre Garantie.`,
+      `${catName} in ${city.name} zum besten Preis. Kostenlose Lieferung, 2 Jahre Garantie.`,
     ],
     fr: [
-      `Vous cherchez ${catName.toLowerCase()} à ${city.name}? Spécialistes de l'installation. Devis gratuit.`,
-      `${catName} à ${city.name} au meilleur prix. Installation professionnelle, garantie 5 ans.`,
+      `Acheter ${catName.toLowerCase()} a ${city.name}. Livraison gratuite et garantie 2 ans.`,
+      `${catName} a ${city.name} au meilleur prix. Livraison gratuite, garantie 2 ans.`,
     ],
     it: [
-      `Cerchi ${catName.toLowerCase()} a ${city.name}? Specialisti dell'installazione. Preventivo gratuito.`,
-      `${catName} a ${city.name} al miglior prezzo. Installazione professionale, garanzia 5 anni.`,
+      `Comprare ${catName.toLowerCase()} a ${city.name}. Spedizione gratuita e garanzia 2 anni.`,
+      `${catName} a ${city.name} al miglior prezzo. Consegna gratuita, garanzia 2 anni.`,
     ],
     pt: [
-      `Procura ${catName.toLowerCase()} em ${city.name}? Especialistas em instalação. Orçamento grátis.`,
-      `${catName} em ${city.name} ao melhor preço. Instalação profissional, garantia 5 anos.`,
+      `Comprar ${catName.toLowerCase()} em ${city.name}. Envio gratis e garantia 2 anos.`,
+      `${catName} em ${city.name} ao melhor preco. Entrega gratuita, garantia 2 anos.`,
     ],
     nl: [
-      `Op zoek naar ${catName.toLowerCase()} in ${city.name}? Installatie specialisten. Gratis offerte.`,
-      `${catName} in ${city.name} voor de beste prijs. Professionele installatie, 5 jaar garantie.`,
+      `${catName.toLowerCase()} kopen in ${city.name}. Gratis verzending en 2 jaar garantie.`,
+      `${catName} in ${city.name} voor de beste prijs. Gratis levering, 2 jaar garantie.`,
     ],
     pl: [
-      `Szukasz ${catName.toLowerCase()} w ${city.name}? Specjaliści instalacji. Bezpłatna wycena.`,
-      `${catName} w ${city.name} w najlepszej cenie. Profesjonalna instalacja, 5 lat gwarancji.`,
+      `Kup ${catName.toLowerCase()} w ${city.name}. Darmowa wysylka i gwarancja 2 lata.`,
+      `${catName} w ${city.name} w najlepszej cenie. Darmowa dostawa, gwarancja 2 lata.`,
     ],
     cs: [
-      `Hledáte ${catName.toLowerCase()} v ${city.name}? Specialisté na instalaci. Bezplatná nabídka.`,
-      `${catName} v ${city.name} za nejlepší cenu. Profesionální instalace, 5 let záruka.`,
+      `Koupit ${catName.toLowerCase()} v ${city.name}. Doprava zdarma a zaruka 2 roky.`,
+      `${catName} v ${city.name} za nejlepsi cenu. Doprava zdarma, zaruka 2 roky.`,
     ],
     el: [
-      `Ψάχνετε ${catName.toLowerCase()} στην ${city.name}; Ειδικοί εγκατάστασης. Δωρεάν προσφορά.`,
-      `${catName} στην ${city.name} στην καλύτερη τιμή. Επαγγελματική εγκατάσταση, 5 χρόνια εγγύηση.`,
+      `Agorase ${catName.toLowerCase()} stin ${city.name}. Dorean apostoli kai eggyisi 2 eton.`,
+      `${catName} stin ${city.name} stin kalyteri timi. Dorean paradosi, eggyisi 2 eton.`,
     ],
   };
   

@@ -31,28 +31,28 @@ export function Footer({ locale }: FooterProps) {
   const cats = CATEGORIES[locale] || CATEGORIES.es;
 
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-100">
+    <footer className="bg-secondary border-t border-border">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href={`/${locale === 'en' ? '' : locale}`} className="text-lg font-light text-neutral-900">
-              Game Room
+            <Link href={`/${locale === 'en' ? '' : locale}`} className="text-lg font-serif font-light text-foreground">
+              The Games Room
             </Link>
-            <p className="text-sm text-neutral-500 mt-4 max-w-xs leading-relaxed">
+            <p className="text-sm text-muted-foreground mt-4 max-w-xs leading-relaxed">
               {t.desc}
             </p>
           </div>
 
           {/* Products */}
           <div>
-            <h4 className="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-4">{t.products}</h4>
+            <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4">{t.products}</h4>
             <ul className="space-y-3">
               {cats.map((cat) => (
                 <li key={cat.slug}>
                   <Link 
                     href={`/${locale === 'en' ? '' : locale + '/'}${cat.slug}`}
-                    className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {cat.name}
                   </Link>
@@ -63,28 +63,28 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-4">{t.company}</h4>
+            <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4">{t.company}</h4>
             <ul className="space-y-3">
-              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}about`} className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">{t.about}</Link></li>
-              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}contacto`} className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">{t.contact}</Link></li>
-              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}faq`} className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors">{t.faq}</Link></li>
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}about`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t.about}</Link></li>
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}contact`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t.contact}</Link></li>
+              <li><Link href={`/${locale === 'en' ? '' : locale + '/'}faq`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{t.faq}</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-neutral-400">
-            © {new Date().getFullYear()} Game Room
+        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} The Games Room
           </p>
           <div className="flex items-center gap-6">
-            <Link href={`/${locale === 'en' ? '' : locale + '/'}privacidad`} className="text-xs text-neutral-400 hover:text-neutral-600 transition-colors">
+            <Link href={`/${locale === 'en' ? '' : locale + '/'}privacidad`} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               {t.privacy}
             </Link>
-            <Link href={`/${locale === 'en' ? '' : locale + '/'}terminos`} className="text-xs text-neutral-400 hover:text-neutral-600 transition-colors">
+            <Link href={`/${locale === 'en' ? '' : locale + '/'}terminos`} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               {t.terms}
             </Link>
-            <Link href={`/${locale === 'en' ? '' : locale + '/'}legal`} className="text-xs text-neutral-400 hover:text-neutral-600 transition-colors">
+            <Link href={`/${locale === 'en' ? '' : locale + '/'}legal`} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               {t.legal}
             </Link>
           </div>

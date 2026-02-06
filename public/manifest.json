@@ -1,7 +1,7 @@
 {
-  "name": "CBD Boutique - Premium CBD Products",
-  "short_name": "CBD Boutique",
-  "description": "Premium CBD products. Organic, lab-tested CBD oils, flowers, cosmetics and edibles. Discreet shipping.",
+  "name": "The Games Room - Mesas de Billar, Futbolines y Dardos",
+  "short_name": "The Games Room",
+  "description": "Tienda especializada en mesas de billar, futbolines profesionales, dianas de dardos y mesas de air hockey. Envio gratis y garantia 2 anos.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -19,5 +19,5 @@
       "type": "image/png"
     }
   ],
-  "categories": ["shopping", "health", "medical"]
+  "categories": ["shopping", "games", "entertainment"]
 }
